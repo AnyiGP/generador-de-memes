@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>GeneradorDeMemes</title>
+</head>
+<body>
+    <header>
+        <h1>Generador de Memes</h1>
+        <div class="botonesDelHeader">
+            <button>
+                <i class="fa-solid fa-image"></i>
+                Imagen
+            </button>
+            <button>
+                <i class="fa-solid fa-font"></i>
+                Texto
+            </button>
+            <button><i class="fa-solid fa-circle-half-stroke"></i>
+                Modo Oscuro
+            </button>
+        </div>
+    </header>
+    <main>
+        <div class="vistaPreliminarMeme">
+            <p>TOP TEXT</p>
+            <div class="contenedorImagenMeme">
+                <img src="" alt="Imagen Meme">
+            </div>
+            <p>BOTTOM TEXT</p>
+            <button class="descargaMeme">
+                <i class="fa-solid fa-download"></i>
+                Descargar Meme
+            </button>
+        </div>
+    </main>
+
+            <!--#####################################################-->
+
+    <aside>
+        <button class="botonCerrar"> 
+            <i class="fa-solid fa-square-xmark"></i>
+        </button> 
+        <section id="Imagen" class="controlImagen">
+            <h2>IMAGEN</h2>
+            <div class="urlImagen">
+                <h3>URL</h3>
+                <input type="url" name="" id="">
+            </div>
+            <div class="fondo">
+                <h3>FONDO</h3>
+                <input type="color" name="" id="">
+                <select name="Mezclador" id="Mezclador">
+                    <option value="Ninguno">Ninguno</option>
+                    <option value="Aclarar">Aclarar</option>
+                    <option value="Oscurecer">Oscurecer</option>
+                    <option value="Diferencia">Diferencia</option>
+                    <option value="Luminosidad">Luminosidad</option>
+                    <option value="Multiplicar">Multiplicar</option>
+                </select>
+            </div>
+            <div class="filtros">
+                <h3>FILTROS</h3>
+                <div>
+                    <label for="Brillo">Brillo</label>    
+                    <input type="range" name="Brillo" id="">
+                </div>
+                <div>
+                    <label for="Opacidad">Opacidad</label>
+                    <input type="range" name="Opacidad" id="">
+                </div>
+                <div>
+                    <label for="Contrastre">Contrastre</label>
+                    <input type="range" name="Contraste" id="">
+                </div>
+                <div>
+                    <label for="Desenfoque">Desenfoque</label>
+                    <input type="range" name="Desenfoque" id="">
+                </div>
+                <div>
+                    <label for="Escala de grises">Escala de grises</label>
+                    <input type="range" name="Escala de grises" id="">
+                </div>
+                <div>
+                    <label for="Sepia">Sepia</label>
+                    <input type="range" name="Sepia" id="">
+                </div>
+                <div>
+                    <label for="HUE">HUE</label>
+                    <input type="range" name="HUE" id="">
+                </div>
+                <div>
+                    <label for="Saturado">Saturado</label>
+                    <input type="range" name="Saturado" id="">
+                </div>
+                <div>
+                    <label for="Negativo">Negativo</label>
+                    <input type="range" name="Negativo" id="">
+                </div>
+            </div>
+            <div class="botonRestablecerFiltros">
+                <input type="button" value="Restablecer filtros">
+            </div> 
+        </div>
+        </section>
+
+            <!--################## TEXTO ###################################-->
+
+        <section id="Texto" class="controlTexto">
+            <h2>TEXTO</h2>
+            <h3>SUPERIOR</h3>
+            <div class="textoSuperior">
+                <textarea type="text">Top Text</textarea>
+            </div>
+            <div class="sinTextoSuperior">
+                <input type="checkbox" name="SinTextoSuperior" id="">
+                <label for="SinTextoSuperior">Sin Texto Superior</label>
+            </div>
+        
+            <!--#####################################################-->
+        
+            <h3>INFERIOR</h3>
+            <div class="textoInferior">
+                <textarea type="text">Bottom Text</textarea>
+            </div>
+            <div class="sinTextoInferior">
+                <input type="checkbox" name="SinTextoInferior" id="">
+                <label for="SinTextoInferior">Sin Texto Inferior</label>
+            </div>
+
+            <!--#####################################################-->
+        
+            <h3>FUENTE</h3>
+            <select name="familiaFuente">
+                <option value="Arial">Arial</option>
+                <option value="Arial Black">Arial Black</option>
+                <option value="American Typewriter">American Typewriter</option>
+                <option value="Andale Mono">Andale Mono</option>
+                <option value="Comic Sans MS">Comic Sans MS</option>
+                <option value="Hevetica">Hevetica</option>
+                <option value="Impact">Impact</option>
+                <option value="Verdana">Verdana</option>
+                <option value="Times New Roman">Times New Roman</option>
+            </select>
+            <div class="size">
+                <input type="number" placeholder="24">
+            </div>
+            <div class="alineadoTexto">
+                <button>
+                    <i class="fa-solid fa-align-right"></i>
+                </button>
+                <button>
+                    <i class="fa-solid fa-align-left"></i>
+                </button>
+                <button>
+                    <i class="fa-solid fa-align-center"></i>
+                </button>
+            </div>
+        
+            <div class="colorFuente">
+                <h3>COLOR FUENTE</h3>
+                <input type="color" value="#fafafa">
+            </div>
+        
+            <div class="fondoFuente">
+                <h3>FONDO FUENTE</h3>
+                <input type="color" value="#fafafa">
+            </div>
+
+            <div class="fondoTransparente">
+                <input type="checkbox" name="fondoTransparente" id="">
+                <label for="fondoTransparente">Fondo Transparente</label>
+            </div>
+
+            <div class="contornoFuente">
+                <h3>CONTORNO</h3>
+                <button>Ninguno</button>
+                <button>Claro</button>
+                <button>Oscuro</button>
+            </div>
+
+            <div class="espaciado">
+                <h3>ESPACIADO</h3>
+                <input type="number" name="espaciado" id="" placeholder="10">
+            </div>
+        
+            <div>
+                <h3>INTERLINEADO</h3>
+                <select name="opcionesInterlineado" id="">
+                    <option value="0.8">0.8</option>
+                    <option value="1">1</option>
+                    <option value="1.2">1.2</option>
+                    <option value="1.5">1.5</option>
+                    <option value="2">2</option>
+                    <option value="2.5">2.5</option>
+                </select>
+            </div>
+        </section>
+    </aside>
+
+
+    <!-- ###################################-->
+    
+    <script src="./app.js"></script>
+</body>
+</html>
