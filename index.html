@@ -21,7 +21,7 @@
                 <i class="fa-solid fa-font"></i>
                 Texto
             </button>
-            <button><i class="fa-solid fa-circle-half-stroke"></i>
+            <button id="modo-oscuro"><i class="fa-solid fa-circle-half-stroke"></i>
                 Modo Oscuro
             </button>
         </div>
@@ -50,7 +50,9 @@
             <h2>IMAGEN</h2>
             <div class="urlImagen">
                 <h3>URL</h3>
-                <input type="url" name="" id="">
+                <div id="img">
+                    <input type="url" name="" id="">
+                </div>
             </div>
             <div class="fondo">
                 <h3>FONDO</h3>
@@ -64,58 +66,70 @@
                     <option value="Multiplicar">Multiplicar</option>
                 </select>
             </div>
-            <div class="filtros">
+            <div id="filtros" class="filtros">
                 <h3>FILTROS</h3>
                 <div>
-                    <label for="Brillo">Brillo</label>    
-                    <input type="range" name="Brillo" id="">
-                </div>
-                <div>
-                    <label for="Opacidad">Opacidad</label>
-                    <input type="range" name="Opacidad" id="">
-                </div>
-                <div>
-                    <label for="Contrastre">Contrastre</label>
-                    <input type="range" name="Contraste" id="">
-                </div>
-                <div>
-                    <label for="Desenfoque">Desenfoque</label>
-                    <input type="range" name="Desenfoque" id="">
-                </div>
-                <div>
-                    <label for="Escala de grises">Escala de grises</label>
-                    <input type="range" name="Escala de grises" id="">
-                </div>
-                <div>
-                    <label for="Sepia">Sepia</label>
-                    <input type="range" name="Sepia" id="">
-                </div>
-                <div>
-                    <label for="HUE">HUE</label>
-                    <input type="range" name="HUE" id="">
-                </div>
-                <div>
-                    <label for="Saturado">Saturado</label>
-                    <input type="range" name="Saturado" id="">
-                </div>
-                <div>
-                    <label for="Negativo">Negativo</label>
-                    <input type="range" name="Negativo" id="">
-                </div>
+                    <label for="pointsBrillo">Brillo</label>    
+                    <input type="range" name="pointsBrillo" id="pointsBrillo" min="0" max="1" step="0.1" value="1">
+                    <p id="rangeBrillo"></p> 
+                  </div>
+                  <div>
+                    <label for="pointsOpacidad">Opacidad:</label>
+                    <input type="range" id="pointsOpacidad" name="pointsOpacidad" min="0" max="1" step="0.1" value="1">
+                    <p id="rangeOpacidad"></p> 
+                  </div>
+                  <div>
+                    <label for="pointsContraste">Contraste:</label>
+                    <input type="range" id="pointsContraste" name="pointsContraste" min="100" max="1000" step="1" value="100">
+                    <p id="rangeContraste"></p> 
+                  </div>
+                  <div>
+                    <label for="pointsDesenfoque">Desenfoque:</label>
+                    <input type="range" id="pointsDesenfoque" name="pointsDesenfoque" min="0" max="10" step="0.1" value="0">
+                    <p id="rangeDesenfoque"></p> 
+                  </div>
+                  <div>
+                    <label for="pointsGrises">Grises:</label>
+                    <input type="range" id="pointsGrises" name="pointsGrises" min="0" max="100" step="1" value="0">
+                    <p id="rangeGrises"></p> 
+                  </div>
+                  <div>
+                    <label for="pointsSepia">Sepia:</label>
+                    <input type="range" id="pointsSepia" name="pointsSepia" min="0" max="100" step="1" value="0">
+                    <p id="rangeSepia"></p> 
+                  </div>
+                  <div>
+                    <label for="pointsHue">Hue:</label>
+                    <input type="range" id="pointsHue" name="pointsHue" min="0" max="359" step="1" value="0">
+                    <p id="rangeHue"></p> 
+                  </div>
+                  <div>
+                    <label for="pointsSaturado">Saturado:</label>
+                    <input type="range" id="pointsSaturado" name="pointsSaturado" min="100" max="1000" step="10" value="100">
+                    <p id="rangeSaturado"></p> 
+                  </div>
+                  <div>
+                    <label for="pointsNegativo">Negativo:</label>
+                    <input type="range" id="pointsNegativo" name="pointsNegativo" min="0" max="1" step="0.1" value="1">
+                    <p id="rangeNegativo"></p> 
+                  </div>
             </div>
             <div class="botonRestablecerFiltros">
                 <input type="button" value="Restablecer filtros">
             </div> 
         </div>
         </section>
+    
 
             <!--################## TEXTO ###################################-->
-
+    
         <section id="Texto" class="controlTexto">
             <h2>TEXTO</h2>
             <h3>SUPERIOR</h3>
             <div class="textoSuperior">
-                <textarea type="text">Top Text</textarea>
+                <input type="text" value="TOP TEXT" id="TopTextInput">
+                <p id="renderText"></p>
+
             </div>
             <div class="sinTextoSuperior">
                 <input type="checkbox" name="SinTextoSuperior" id="">
