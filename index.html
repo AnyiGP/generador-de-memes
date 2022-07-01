@@ -30,7 +30,7 @@
         <div class="vistaPreliminarMeme">
             <p>TOP TEXT</p>
             <div class="contenedorImagenMeme">
-                <img src="" alt="Imagen Meme">
+                <img src="./images/imagen-prueba.jpg" alt="Imagen Meme" id="img">
             </div>
             <p>BOTTOM TEXT</p>
             <button class="descargaMeme">
@@ -56,7 +56,7 @@
             </div>
             <div class="fondo">
                 <h3>FONDO</h3>
-                <input type="color" name="" id="">
+                <input type="color" name="Mezclador" id="">
                 <select name="Mezclador" id="Mezclador">
                     <option value="Ninguno">Ninguno</option>
                     <option value="Aclarar">Aclarar</option>
@@ -71,51 +71,42 @@
                 <div>
                     <label for="pointsBrillo">Brillo</label>    
                     <input type="range" name="pointsBrillo" id="pointsBrillo" min="0" max="1" step="0.1" value="1">
-                    <p id="rangeBrillo"></p> 
-                  </div>
+                </div>
                   <div>
                     <label for="pointsOpacidad">Opacidad:</label>
                     <input type="range" id="pointsOpacidad" name="pointsOpacidad" min="0" max="1" step="0.1" value="1">
-                    <p id="rangeOpacidad"></p> 
                   </div>
                   <div>
                     <label for="pointsContraste">Contraste:</label>
                     <input type="range" id="pointsContraste" name="pointsContraste" min="100" max="1000" step="1" value="100">
-                    <p id="rangeContraste"></p> 
                   </div>
                   <div>
                     <label for="pointsDesenfoque">Desenfoque:</label>
                     <input type="range" id="pointsDesenfoque" name="pointsDesenfoque" min="0" max="10" step="0.1" value="0">
-                    <p id="rangeDesenfoque"></p> 
                   </div>
                   <div>
                     <label for="pointsGrises">Grises:</label>
                     <input type="range" id="pointsGrises" name="pointsGrises" min="0" max="100" step="1" value="0">
-                    <p id="rangeGrises"></p> 
                   </div>
                   <div>
                     <label for="pointsSepia">Sepia:</label>
                     <input type="range" id="pointsSepia" name="pointsSepia" min="0" max="100" step="1" value="0">
-                    <p id="rangeSepia"></p> 
                   </div>
                   <div>
                     <label for="pointsHue">Hue:</label>
                     <input type="range" id="pointsHue" name="pointsHue" min="0" max="359" step="1" value="0">
-                    <p id="rangeHue"></p> 
                   </div>
                   <div>
                     <label for="pointsSaturado">Saturado:</label>
                     <input type="range" id="pointsSaturado" name="pointsSaturado" min="100" max="1000" step="10" value="100">
-                    <p id="rangeSaturado"></p> 
                   </div>
                   <div>
                     <label for="pointsNegativo">Negativo:</label>
                     <input type="range" id="pointsNegativo" name="pointsNegativo" min="0" max="1" step="0.1" value="1">
-                    <p id="rangeNegativo"></p> 
                   </div>
             </div>
-            <div class="botonRestablecerFiltros">
-                <input type="button" value="Restablecer filtros">
+            <div id="btnRestablecerFiltros" class="btnRestablecerFiltros">
+                <input type="button" value='Restablecer Filtros'>
             </div> 
         </div>
         </section>

@@ -155,7 +155,7 @@ h3 {
     appearance: none;
 }
 
-.botonRestablecerFiltros {
+.btnRestablecerFiltros {
     margin: 1rem;
     display: flex;
     justify-content: center;
