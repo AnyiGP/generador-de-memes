@@ -1,65 +1,68 @@
 *{
     margin: 0;
-    padding: 0%;
+    padding: 0;
     font-family: 'Open Sans';
 }
-
-body {
-    margin: auto;
-    padding: auto;
-    background-color: black;
-    color:azure
-}
-
+/* 
 button {
     border-style: none;
+} */
+
+h1 {
+    font-size: 2rem;
 }
 
-header {
-    width: auto;
+.encabezado {
+    /* width: auto;
     height: 15vh;
-    padding-top: 2rem;
-    color: aliceblue;
-    background-color: grey;
+    padding-top: 2rem; */
+    width: 90vw;
+    position: absolute;
+    color: #2f3332;
+    background-color: whitesmoke;
     text-align: center;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 /***primer prueba con js**cambia a modo oscuro el body, investigar como hago para hacer el modo oscuro al header***/
 
 .modo-oscuro {
-    background-color: aliceblue;
+    background-color: #2f3332;
     color: black;
 }
+
 /**************************************************************/
 
 
 .botonesDelHeader button {
-    width: 10%;
-    height: auto;
+    /* width: 10%;
+    height: auto;  */
     padding: 1rem;
-    color: aliceblue;
+    color: #2f3332;
     background-color: transparent;
     border-style: none;
 }
 
-main {
-    width: auto;
-    height: 60vh;
-    padding: 5%;
-    background-color: darkgrey;
+.main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.vistaPreliminarMeme {
+.vistaMeme {
+    position: absolute;
+    top: 25vh;
+    left: 30vw;
     width: 30vw;
     height: 30vw;
-    background-color: gainsboro;
+    background-color: #a5a29b;
+    color: #2f3332;
     text-align: center;
 }
 
-.vistaPreliminarMeme p {
+.vistaMeme p {
     height: 15%;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 2rem;
@@ -71,26 +74,53 @@ main {
 
 .contenedorImagenMeme {
     height: 70%;
-    background-color: black;
+    background-color: #2f3332;
+}
+
+.img {
+    height: 100%;
+}
+
+.inputColor::-webkit-color-swatch { 
+    appearance: none;
+    border-radius: 50%;
+    background-color: transparent;
+    border: none;
 }
 
 .descargaMeme {
+    border-style: none;
     width: 60%;
     margin: 1rem;
     padding: 0.5rem;
-    color: white;
-    background-color: darkgreen;
+    color: #2f3332;
+    background-color: #6bd8fa;
 }
 
 .controlImagen,
 .controlTexto {
-    width: 20vw;
+    width: 24vw;
     height: 100%;
-    padding: 2vw;
-    background-color: rgb(103, 103, 107);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #6bd8fa;
+    padding: 0vw 2vw;
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    right: 0;
+    box-shadow: -10px 10px 100px 5px rgb(0 0 0 / 30%);
+    z-index: 10;
+    
+    
+    /* overflow: scroll;
+    width: 20vw;
+    height: 100vh;
+    background-color: #6bd8fa;
     position: fixed;
     right: 0;
-    top: 0; 
+    top: 0;  */
 }
 
 .botonCerrar {
@@ -98,41 +128,104 @@ main {
     height: 1rem;
     position: absolute;
     right: 3rem;
+    top: 1rem;
 }
 
 h2 {
-    color: white;
+    font-size: 2rem;
+    color: #2f3332;
     text-align: center;
 }
 
 h3 {
     padding: 1rem 0rem 0.5rem 0rem;
-    color: white;
+    color: #2f3332;
     font-size: medium;
 }
 
 .urlImagen input {
     width: 100%;
     padding: 0.2rem;
-    background-color: gray;
+    background-color: #c6c6c6;
     border-style: none;
+}
+.fondo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.colorDeFondo {
+    width: 8rem;
+    background-color: #c6c6c6;
+    display: flex;
+    text-align: center;
+}
+
+/*#fafafa*/
+.colorDeFondo span {
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.mezclador {
+    width: 8rem;
+    background-color: #c6c6c6;
+}
+/* 
+input[type='range']  {
+    width: 100%;
+    background-color: #5a5d68;
+    border-radius: 10px;
+    appearance: none;
+    height: 6px;
+    margin-top: 10px;
+  }
+   */
+
+  /**cambia la pelotita del input*/
+input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: #a5a29b;
+    cursor: pointer;
+  }
+
+  /*estila los check box*/
+/* input[type='checkbox'] {
+    margin: 0 5px 0 0;
+  } */
+
+  /*cambia la pelotita para elegir color*/
+input[type='color']::-webkit-color-swatch {
+        height: 1.2rem;
+        min-width: 18px;
+        border-radius: 50%;
+        border: 0;
+        margin: 0;
+        padding: 0;
+        cursor: pointer;
+        margin-right: 10px;
 }
 
 .fondo input {
     width: 40%;
-    background-color: gray;
+    background-color: #c6c6c6;
     border-style: none;
     padding: 0.2rem;
     margin-right: 10%;
 }
 
 .fondo select {
-    width: 40%;
-    height: auto;
-    background-color: gray;
-    color: aliceblue;
+    width: 8rem;
+    background-color: #c6c6c6;
+    color: #2f3332;
     padding: 0.2rem 0rem;
 }
+
+
 
 .filtros div {
     display: flex;
@@ -140,7 +233,7 @@ h3 {
 }
 
 .filtros label {
-    color: aliceblue;
+    color: #676767;
     font-weight: lighter;
     font-size: 0.8rem;
     text-transform: uppercase;
@@ -150,34 +243,50 @@ h3 {
     width: 100%;
     height: 0.5rem;
     margin: 0.5rem 0rem 1rem 0rem;
-    background-color: gray;
+    background-color: #c6c6c6;
+    border-style: #2f3332;
     border-radius: 1rem;
     appearance: none;
 }
 
-.btnRestablecerFiltros {
+.btnReestablecerFiltros {
     margin: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.btnReestablecerFiltros input {
+    width: 60%;
+    height: auto;
+    border-style: none;
+    background-color: #c6c6c6;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2f3332;
+}
+
 .alineadoTexto i {
     width: 1rem;
     height: 1rem;
 }
-/*
+
 .textoSuperior ,
 .textoInferior {
-} */
+    background-color: transparent;
+    border-style: none;
+    border-bottom: #2f3332 solid 2px;
+    padding-bottom: 1rem;
+}
 
 .sinTextoSuperior ,
 .sinTextoInferior {
-    padding: 1rem 0rem;
-    color: aliceblue;
+    margin: 1rem 0rem 0rem 0rem;
+    color: #2f3332;
     font-size: small;
 }
-
+/* 
 .controlTexto {
     display: none;
-}
+} */
+

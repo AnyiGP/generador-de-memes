@@ -30,27 +30,64 @@
 
 // prueba4Boton.addEventListener('click', funcionNombre)
 
-//////////////////////////////////
+//////////elegir entre texto e imagen//////////
 
-//AGREGAR UN TEXTO AL INPUT O TEXTAREA, CUANDO EL USUARIO HACE CLICK EN EL IMPUT PARA EMPEZAR A ESCRIBIR
+const texto = document.getElementById('texto')
+const imagen = document.getElementById('imagen')
 
-const input = document.getElementById('TopTextInput') // tengo el input de donde tomar la info
-const renderText = document.getElementById('renderText')// Tengo el parrafo donde voy a mostrar lo que escribe el usuario
-const btnModoOscuro = document.getElementById('modo-oscuro'); 
+const btnImg = document.getElementById('btnImg')
+const btnTxt = document.getElementById('btnTxt')
 
-input.addEventListener('input', (event) => {
-    const textoIngresado = event.target.value;  //ESTO ES LO QUE EL USUARIO EST'A ESCRIBIENDO
-    renderText.innerHTML = textoIngresado;
-  })
-
-/////////////////////////////////////////////////////////////
-
-btnModoOscuro.addEventListener('click', () => { //el evento click en html se le debe poner el on adelante => onClick
-  // event.preventDefault();
-  // console.log('asdnsad')
-  document.body.classList.toggle('modo-oscuro'); //toggle lo que hace es si tiene la clase se la quito y si no la tiene se la pongo
-  // document.body.classList.toggle('una');
+btnImg.addEventListener('click', () => {
+  texto.style.display = 'none'
+  imagen.style.display = 'block'
 })
+ 
+btnTxt.addEventListener('click', () => {
+  imagen.style.display = 'none'
+  texto.style.display = 'block'
+})
+
+///////////////////modo claro/oscuro///////////////////////
+
+const btnModoOscuro = document.getElementById('btnModoOscuro')
+const encabezado = document.getElementById('encabezado')
+const vistaMeme = document.getElementById('vistaMeme') 
+
+btnModoOscuro.addEventListener('click', () => {
+  encabezado.classList.toggle('modo-oscuro')
+  vistaMeme.classList.toggle('modo-oscuro')
+})
+
+
+
+// btnModoOscuro.addEventListener('click', () => { //el evento click en html se le debe poner el on adelante => onClick
+//   // event.preventDefault();
+//   // console.log('asdnsad')
+//   document.body.classList.add('modo-oscuro'); //probar tb con .toggle que hace q si tiene la clase se la quita y si no la tiene se la pone
+//   // document.body.classList.toggle('una');
+//   document.body.classList.remove('modo-claro');
+// })
+
+
+
+//////////escribir en el meme///////////////////
+
+
+
+
+
+// const input = document.getElementById('TopTextInput') // tengo el input de donde tomar la info
+// const renderText = document.getElementById('renderText')// Tengo el parrafo donde voy a mostrar lo que escribe el usuario
+// const btnModoOscuro = document.getElementById('modo-oscuro'); 
+
+// input.addEventListener('input', (event) => {
+//     const textoIngresado = event.target.value;  //ESTO ES LO QUE EL USUARIO EST'A ESCRIBIENDO
+//     renderText.innerHTML = textoIngresado;
+//   })
+
+
+
 
 //Agregar imagen con url
 
@@ -63,7 +100,9 @@ const img = document.getElementById('img')
 //filtro brillo
 const pointsBrillo = document.getElementById('pointsBrillo');
 
+
 pointsBrillo.addEventListener('input', (event) => {
+  console.log(event)
   const valorActualBrillo = event.target.value;
   img.style.filter = `brightness(${valorActualBrillo})`
 })
@@ -140,16 +179,18 @@ pointsNegativo.addEventListener('input', (event) => {
   img.style.filter = `invert(${valorActualNegativo})`
 })
 
-//btn restablecer filtros
+//btn reestablecer filtros
 
-const btnRestablecerFiltros = document.getElementById('btnRestablecerFiltros') 
-btnRestablecerFiltros.addEventListener('onclick', (event) => {
+const btnReestablecerFiltros = document.getElementById('btnReestablecerFiltros') 
+btnReestablecerFiltros.addEventListener('onclick', (event) => {
   pointsNegativo.value = '1' 
 })
 
-btnRestablecerFiltros()
 
-
+const filtros = () => {
+  console.log(pointsBrillo.value)
+}
+ filtros()
 
 //////////////////prueba 2 con filtros apra que se acumulen en la imagen
 // const filtros = () => {

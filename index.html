@@ -4,36 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+    <link rel="stylesheet" href="style.css">
     <title>GeneradorDeMemes</title>
 </head>
 <body>
-    <header>
+    <div class="encabezado">
+    <header id="encabezado">
         <h1>Generador de Memes</h1>
         <div class="botonesDelHeader">
-            <button>
+            <!-- <button>
+            <div id="btnImg" class="btnImg">
                 <i class="fa-solid fa-image"></i>
+                <input type="button" value='Imagen'>
+            </div>
+            </button>
+             -->
+                
+            <button class="" id="btnImg">
+                <i class="fa-solid fa-image" aria=""></i>
                 Imagen
             </button>
-            <button>
+            <button id="btnTxt">
                 <i class="fa-solid fa-font"></i>
                 Texto
             </button>
-            <button id="modo-oscuro"><i class="fa-solid fa-circle-half-stroke"></i>
+            <button id="btnModoOscuro"><i class="fa-solid fa-circle-half-stroke"></i>
                 Modo Oscuro
             </button>
         </div>
     </header>
-    <main>
-        <div class="vistaPreliminarMeme">
-            <p>TOP TEXT</p>
+    </div>
+    <main id="vistaMeme" class="">
+        <div class="vistaMeme">
+            <p id="renderTopTxt">TOP TEXT</p>
             <div class="contenedorImagenMeme">
-                <img src="./images/imagen-prueba.jpg" alt="Imagen Meme" id="img">
+                <img class="img" id="img" src="./images/imagen-prueba.jpg" alt="Imagen Meme" >
             </div>
-            <p>BOTTOM TEXT</p>
-            <button class="descargaMeme">
+            <p id="renderBotTxt">BOTTOM TEXT</p>
+            <button class="descargaMeme" id="descargarMeme">
                 <i class="fa-solid fa-download"></i>
                 Descargar Meme
             </button>
@@ -41,12 +52,14 @@
     </main>
 
             <!--#####################################################-->
-
-    <aside>
+            
+            
+    <aside id="barraLateral" class="barraLateral">
         <button class="botonCerrar"> 
             <i class="fa-solid fa-square-xmark"></i>
-        </button> 
-        <section id="Imagen" class="controlImagen">
+        </button> <!--ver que paso con este boton que no aparece-->
+        
+        <section id="imagen" class="controlImagen">
             <h2>IMAGEN</h2>
             <div class="urlImagen">
                 <h3>URL</h3>
@@ -54,10 +67,20 @@
                     <input type="url" name="" id="">
                 </div>
             </div>
+            <h3>FONDO</h3>
             <div class="fondo">
-                <h3>FONDO</h3>
-                <input type="color" name="Mezclador" id="">
-                <select name="Mezclador" id="Mezclador">
+                <div class="colorDeFondo">
+                    <div>
+                    <input class="inputColor" type="color" name="Color de Fondo" id="inputColor" value="#fffff" aria-label="Color de fondo imagen">
+                    </div>
+                    <span id="imprimirColor">#fafafa</span>
+                </div>
+<!--
+
+y despues hay un pseudo-elemento ::-webkit-color-swatch-->
+
+                <div class="mezclador">
+                <select name="Mezclador" id="mezclador" class="mezclador2">
                     <option value="Ninguno">Ninguno</option>
                     <option value="Aclarar">Aclarar</option>
                     <option value="Oscurecer">Oscurecer</option>
@@ -65,6 +88,7 @@
                     <option value="Luminosidad">Luminosidad</option>
                     <option value="Multiplicar">Multiplicar</option>
                 </select>
+                </div>
             </div>
             <div id="filtros" class="filtros">
                 <h3>FILTROS</h3>
@@ -105,43 +129,61 @@
                     <input type="range" id="pointsNegativo" name="pointsNegativo" min="0" max="1" step="0.1" value="1">
                   </div>
             </div>
-            <div id="btnRestablecerFiltros" class="btnRestablecerFiltros">
-                <input type="button" value='Restablecer Filtros'>
+            <div id="btnReestablecerFiltros" class="btnReestablecerFiltros">
+                <input type="button" value='Reestablecer Filtros'>
             </div> 
         </div>
         </section>
     
 
             <!--################## TEXTO ###################################-->
-    
-        <section id="Texto" class="controlTexto">
+        
+        <section id="texto" class="controlTexto">
+            
             <h2>TEXTO</h2>
             <h3>SUPERIOR</h3>
-            <div class="textoSuperior">
-                <input type="text" value="TOP TEXT" id="TopTextInput">
-                <p id="renderText"></p>
-
+            <div id="textoSuperior">
+                <input type="text" value="TOP TEXT" id="TopTextInput" class="textoSuperior">
+                <!-- <p id="renderText"></p> -->
             </div>
-            <div class="sinTextoSuperior">
+            <!-- <div >
                 <input type="checkbox" name="SinTextoSuperior" id="">
                 <label for="SinTextoSuperior">Sin Texto Superior</label>
-            </div>
+            </div> -->
+
+            <p class="sinTextoSuperior">
+                <label>
+                  <input type="checkbox" class="filled-in" checked="checked"/>
+                  <span>Sin Texto Superior</span>
+                </label>
+            </p>
+
         
             <!--#####################################################-->
         
             <h3>INFERIOR</h3>
-            <div class="textoInferior">
-                <textarea type="text">Bottom Text</textarea>
+            <div id="textoInferior">
+                <input type="text" value="TOP TEXT" id="TopTextInput" class="textoSuperior">
+<!--             
+                <textarea type="text" class="textoInferior">Bottom Text</textarea> -->
             </div>
-            <div class="sinTextoInferior">
-                <input type="checkbox" name="SinTextoInferior" id="">
-                <label for="SinTextoInferior">Sin Texto Inferior</label>
-            </div>
+            
+            <!-- <div class="sinTextoInferior">
+                <input type="checkbox" name="sinTextoInferior" id="">
+                <label for="sinTextoInferior">Sin Texto Inferior</label>
+            </div> -->
+
+              <p class="sinTextoInferior">
+                <label >
+                  <input type="checkbox" class="filled-in" checked="checked" />
+                  <span>Sin Texto Inferior</span>
+                </label>
+              </p>
 
             <!--#####################################################-->
         
             <h3>FUENTE</h3>
-            <select name="familiaFuente">
+            <!-- <select name="familiaFuente">
                 <option value="Arial">Arial</option>
                 <option value="Arial Black">Arial Black</option>
                 <option value="American Typewriter">American Typewriter</option>
@@ -152,6 +194,25 @@
                 <option value="Verdana">Verdana</option>
                 <option value="Times New Roman">Times New Roman</option>
             </select>
+            
+             -->
+            <div class="input-field col s12">
+                <select>
+                  <option value="Estilo Fuente" disabled selected>Estilo Fuente</option>
+                  <option value="Arial">Arial</option>
+                  <option value="Arial Black">Arial Black</option>
+                  <option value="American Typewriter">American Typewriter</option>
+                  <option value="Andale Mono">Andale Mono</option>
+                  <option value="Comic Sans MS">Comic Sans MS</option>
+                  <option value="Hevetica">Hevetica</option>
+                  <option value="Impact">Impact</option>
+                  <option value="Verdana">Verdana</option>
+                  <option value="Times New Roman">Times New Roman</option>
+                </select>
+                <label></label>
+              </div>
+
+
             <div class="size">
                 <input type="number" placeholder="24">
             </div>
@@ -194,7 +255,7 @@
                 <input type="number" name="espaciado" id="" placeholder="10">
             </div>
         
-            <div>
+            <div class="interlineado">
                 <h3>INTERLINEADO</h3>
                 <select name="opcionesInterlineado" id="">
                     <option value="0.8">0.8</option>
@@ -209,8 +270,9 @@
     </aside>
 
 
-    <!-- ###################################-->
-    
+    <!--    ###################################-->
+ <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+     -->
     <script src="./app.js"></script>
 </body>
 </html>
