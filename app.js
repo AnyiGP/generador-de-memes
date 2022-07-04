@@ -77,19 +77,37 @@ btnModoOscuro.addEventListener('click', () => {
 
 
 
-// const input = document.getElementById('TopTextInput') // tengo el input de donde tomar la info
-// const renderText = document.getElementById('renderText')// Tengo el parrafo donde voy a mostrar lo que escribe el usuario
+
+
+const TopTextInput = document.getElementById('TopTextInput') // tengo el input de donde tomar la info
+const BotTextInput = document.getElementById('BotTextInput') // tengo el input de donde tomar la info
+const renderText = document.getElementById('renderText')// Tengo el parrafo donde voy a mostrar lo que escribe el usuario
+
 // const btnModoOscuro = document.getElementById('modo-oscuro'); 
 
-// input.addEventListener('input', (event) => {
-//     const textoIngresado = event.target.value;  //ESTO ES LO QUE EL USUARIO EST'A ESCRIBIENDO
-//     renderText.innerHTML = textoIngresado;
-//   })
+TopTextInput.addEventListener('input', (event) => {
+    const textoIngresado = event.target.value;  //ESTO ES LO QUE EL USUARIO EST'A ESCRIBIENDO
+    renderTopText.innerHTML = textoIngresado;
+  })
 
+BotTextInput.addEventListener('input', (event) => {
+    const textoIngresado = event.target.value;  //ESTO ES LO QUE EL USUARIO EST'A ESCRIBIENDO
+    renderBotText.innerHTML = textoIngresado;
+  })
 
 
 
 //Agregar imagen con url
+
+// const imagenMeme = document.getElementById('img')
+
+
+// const actualizarImagen = (evento) => {
+//   if (evento.target.value.length !== 0) {
+//     $('imagenMeme').style.backgroundImage = `url("${evento.target.value}")`
+//   }
+// }
+
 
 
 

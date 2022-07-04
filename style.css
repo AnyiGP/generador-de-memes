@@ -168,10 +168,6 @@ h3 {
     align-items: center;
 }
 
-.mezclador {
-    width: 8rem;
-    background-color: #c6c6c6;
-}
 /* 
 input[type='range']  {
     width: 100%;
@@ -199,7 +195,7 @@ input[type='range']::-webkit-slider-thumb {
   } */
 
   /*cambia la pelotita para elegir color*/
-input[type='color']::-webkit-color-swatch {
+input[type="color"]::-webkit-color-swatch {
         height: 1.2rem;
         min-width: 18px;
         border-radius: 50%;
@@ -220,12 +216,13 @@ input[type='color']::-webkit-color-swatch {
 
 .fondo select {
     width: 8rem;
+    height: 2rem;
     background-color: #c6c6c6;
     color: #2f3332;
     padding: 0.2rem 0rem;
+    border-style: none;
+
 }
-
-
 
 .filtros div {
     display: flex;
@@ -256,6 +253,9 @@ input[type='color']::-webkit-color-swatch {
     align-items: center;
 }
 
+.interlineado {
+    margin-bottom: 1rem;
+}
 .btnReestablecerFiltros input {
     width: 60%;
     height: auto;
@@ -273,6 +273,7 @@ input[type='color']::-webkit-color-swatch {
 
 .textoSuperior ,
 .textoInferior {
+    width: 100%;
     background-color: transparent;
     border-style: none;
     border-bottom: #2f3332 solid 2px;
@@ -280,11 +281,13 @@ input[type='color']::-webkit-color-swatch {
 }
 
 .sinTextoSuperior ,
-.sinTextoInferior {
+.sinTextoInferior,
+.fondoTransparente {
     margin: 1rem 0rem 0rem 0rem;
     color: #2f3332;
     font-size: small;
 }
+
 /* 
 .controlTexto {
     display: none;
