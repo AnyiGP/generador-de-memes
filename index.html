@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="style.css">
     <title>GeneradorDeMemes</title>
 </head>
-<body>
-    <div class="encabezado">
-    <header id="encabezado">
+<body id='contenedorBody' class="contenedorBody">
+    <div class="encabezado" id="encabezado">
+    <header>
         <h1>Generador de Memes</h1>
         <div class="botonesDelHeader">
             <!-- <button>
@@ -31,10 +31,18 @@
                 <i class="fa-solid fa-font"></i>
                 Texto
             </button>
-            <button id="btnModoOscuro"><i class="fa-solid fa-circle-half-stroke"></i>
+            <!-- <button id="btnModoOscuro" ><i class="fa-solid fa-circle-half-stroke"></i>
                 Modo Oscuro
+            </button> -->
+            <button id="btnModoOscuro" class="switch">
+                <label>
+                Claro
+                <input type="checkbox">
+                <span class="lever"></span>
+                Oscuro
+                </label>
             </button>
-        </div>
+            </div>
     </header>
     </div>
     <main id="vistaMeme" class="">
@@ -57,14 +65,11 @@
             
             
     <aside id="barraLateral" class="barraLateral">
-        <button class="botonCerrar"> 
-            <i class="fa-solid fa-square-xmark"></i>
-        </button> <!--ver que paso con este boton que no aparece-->
-
+            <a class="waves-effect waves-light btn-small #40c4ff light-blue accent-2">x</a>
+        
             <!--################## TEXTO ###################################-->
         
             <section id="texto" class="controlTexto">
-            
                 <h2>TEXTO</h2>
                 <h3>SUPERIOR</h3>
                 <div id="textoSuperior">
@@ -77,7 +82,7 @@
     
                 <p class="sinTextoSuperior">
                     <label>
-                      <input type="checkbox" class="filled-in" checked="checked"/>
+                      <input type="checkbox" class="filled-in"/>
                       <span>Sin Texto Superior</span>
                     </label>
                 </p>
@@ -99,7 +104,7 @@
     
                   <p class="sinTextoInferior">
                     <label >
-                      <input type="checkbox" class="filled-in" checked="checked" />
+                      <input type="checkbox" class="filled-in"/>
                       <span>Sin Texto Inferior</span>
                     </label>
                   </p>
@@ -120,7 +125,8 @@
                 </select>
                 
                  -->
-                <div class="input-field col s12">
+                
+                <div class="estiloFuente input-field col s12">
                     <select>
                       <option value="Estilo Fuente" disabled selected>Estilo Fuente</option>
                       <option value="Arial">Arial</option>
@@ -136,7 +142,7 @@
                     <label></label>
                   </div>
     
-    
+                <div class="sizeAlineado">  
                 <div class="size">
                     <input type="number" placeholder="24">
                 </div>
@@ -151,7 +157,7 @@
                         <i class="fa-solid fa-align-center"></i>
                     </button>
                 </div>
-                
+                </div>
                 
                 <div class="colorFuente">
                     <h3>COLOR FUENTE</h3>
@@ -164,11 +170,20 @@
                         </div>
                     </div>
                 </div>
-            
+
+                <p class="fondoTransparente">
+                    <label>
+                      <input type="checkbox" class="filled-in" name="fondoTransparente"/>
+                      <span>Fondo Transparente</span>
+                    </label>
+                </p>
+    
+<!--                 
+
                 <div class="fondoTransparente">
                     <input type="checkbox" name="fondoTransparente" id="">
                     <label for="fondoTransparente">Fondo Transparente</label>
-                </div>
+                </div> -->
     
                 <div class="contornoFuente">
                     <h3>CONTORNO</h3>
@@ -198,6 +213,7 @@
     <!--***************imagen******************-->
         
         <section id="imagen" class="controlImagen">
+            <a class="waves-effect waves-light btn-small #40c4ff light-blue accent-2">x</a>
             <h2>IMAGEN</h2>
             <div class="urlImagen">
                 <h3>URL</h3>
@@ -217,8 +233,8 @@
 
 y despues hay un pseudo-elemento ::-webkit-color-swatch-->
 
-                <div class="mezclador input-field col s12">
-                <select name="Mezclador" id="mezclador" class="mezclador2">
+                <div class="input-field col s12">
+                <select name="Mezclador" id="mezclador">
                     <option value="Mezclador" disbled>Mezclador</option>
                     <option value="Ninguno">Ninguno</option>
                     <option value="Aclarar">Aclarar</option>
@@ -270,6 +286,7 @@ y despues hay un pseudo-elemento ::-webkit-color-swatch-->
             </div>
             <div id="btnReestablecerFiltros" class="btnReestablecerFiltros">
                 <input type="button" value='Reestablecer Filtros'>
+                
             </div> 
         </div>
         </section>

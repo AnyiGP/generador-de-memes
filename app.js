@@ -50,14 +50,41 @@ btnTxt.addEventListener('click', () => {
 
 ///////////////////modo claro/oscuro///////////////////////
 
+// const btnModoOscuro = document.getElementById('btnModoOscuro')
+// const encabezado = document.getElementById('encabezado')
+// const vistaMeme = document.getElementById('vistaMeme') 
+
+// btnModoOscuro.addEventListener('click', () => {
+//   encabezado.classList.toggle('modo-oscuro')
+//   vistaMeme.classList.toggle('modo-oscuro')
+// })
+
 const btnModoOscuro = document.getElementById('btnModoOscuro')
 const encabezado = document.getElementById('encabezado')
-const vistaMeme = document.getElementById('vistaMeme') 
+const vistaMeme = document.getElementById('vistaMeme')
+const contenedorBody = document.getElementById('contenedorBody') 
+const textoAside = document.getElementById('texto')
+const imagenAside = document.getElementById('imagen')
+const titulos2 = document.querySelectorAll('h2')
 
-btnModoOscuro.addEventListener('click', () => {
+console.log(titulos2)
+
+
+btnModoOscuro.addEventListener('input', () => {
+  contenedorBody.classList.toggle('modo-oscuro2')
   encabezado.classList.toggle('modo-oscuro')
   vistaMeme.classList.toggle('modo-oscuro')
+  textoAside.classList.toggle('modo-oscuro3')  
+  imagenAside.classList.toggle('modo-oscuro3')
+
+  for ( let i = 0; i < titulos2.length; i++) {
+    titulos2[i].classList.toggle('modo-oscuro4')
+
+  }
+  
+  
 })
+
 
 
 
@@ -72,12 +99,6 @@ btnModoOscuro.addEventListener('click', () => {
 
 
 //////////escribir en el meme///////////////////
-
-
-
-
-
-
 
 const TopTextInput = document.getElementById('TopTextInput') // tengo el input de donde tomar la info
 const BotTextInput = document.getElementById('BotTextInput') // tengo el input de donde tomar la info
@@ -109,106 +130,161 @@ BotTextInput.addEventListener('input', (event) => {
 // }
 
 
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('select');
+  var instances = M.FormSelect.init(elems);
+})
 
-
-//////////////FILTROS//////////////////////////////
-
+//*******ME TRAIGO LA IMAGEN*******//
 const img = document.getElementById('img')
 
-//filtro brillo
-const pointsBrillo = document.getElementById('pointsBrillo');
+//////////////FILTROS//////////////////////////////
+//***********FINCION QUE NADA POR NO ACUMULA********//
 
 
-pointsBrillo.addEventListener('input', (event) => {
-  console.log(event)
-  const valorActualBrillo = event.target.value;
-  img.style.filter = `brightness(${valorActualBrillo})`
-})
+// // //filtro brillo
 
-//filtro Opacidad
+// const pointsBrillo = document.getElementById('pointsBrillo');
 
-const pointsOpacidad = document.getElementById('pointsOpacidad');
+// pointsBrillo.addEventListener('input', (event) => {
+//   img.style.filter = `brightness(${event.target.value})`
+// })
 
-pointsOpacidad.addEventListener('input', (event) => {
-  const valorActualOpacidad = event.target.value;
-  img.style.filter = `opacity(${valorActualOpacidad})`
-})
+// // //filtro Opacidad
 
-//filtro contraste
+// const pointsOpacidad = document.getElementById('pointsOpacidad');
 
-const pointsContraste = document.getElementById('pointsContraste');
+// pointsOpacidad.addEventListener('input', (event) => {
+//   img.style.filter = `opacity(${event.target.value})`
+// })
 
-pointsContraste.addEventListener('input', (event) => {
-  const valorActualContraste = event.target.value;
-  img.style.filter = `contrast(${valorActualContraste}%)`
-})
+// // //filtro contraste
 
-//filtro Desenfoque blur
+// const pointsContraste = document.getElementById('pointsContraste');
 
-const pointsDesenfoque = document.getElementById('pointsDesenfoque');
+// pointsContraste.addEventListener('input', (event) => {
+//   img.style.filter = `contrast(${event.target.value}%)`
+// })
 
-pointsDesenfoque.addEventListener('input', (event) => {
-  const valorActualDesenfoque = event.target.value;
-  img.style.filter = `blur(${valorActualDesenfoque}px)`
-})
+// // //filtro Desenfoque blur
 
-// Filtro escala de grises
+// const pointsDesenfoque = document.getElementById('pointsDesenfoque');
 
-const pointsGrises = document.getElementById('pointsGrises');
+// pointsDesenfoque.addEventListener('input', (event) => {
+//   img.style.filter = `blur(${event.target.value}px)`
+// })
 
-pointsGrises.addEventListener('input', (event) => {
-  const valorActualGrises = event.target.value;
-  img.style.filter = `grayscale(${valorActualGrises}%)`
-})
+// // // Filtro escala de grises
 
-// filtro Sepia
+// const pointsGrises = document.getElementById('pointsGrises');
 
+// pointsGrises.addEventListener('input', (event) => {
+//   img.style.filter = `grayscale(${event.target.value}%)`
+// })
+
+// // // filtro Sepia
+
+// const pointsSepia = document.getElementById('pointsSepia');
+
+// pointsSepia.addEventListener('input', (event) => {
+//   img.style.filter = `sepia(${event.target.value}%)`
+// })
+
+// // // filtro Hue-rotation
+
+// const pointsHue = document.getElementById('pointsHue');
+
+// pointsHue.addEventListener('input', (event) => {
+//   img.style.filter = `hue-rotation(${event.target.value}deg)`
+// })
+
+// // //filtro Saturado
+
+// const pointsSaturado = document.getElementById('pointsSaturado');
+
+// pointsSaturado.addEventListener('input', (event) => {
+//   img.style.filter = `saturation(${event.target.value}%)`
+// })
+
+// // //filtro Negativo invert
+
+// const pointsNegativo = document.getElementById('pointsNegativo');
+
+// pointsNegativo.addEventListener('input', (event) => {
+//   img.style.filter = `invert(${event.target.value})`
+// })
+
+//*****************btn reestablecer filtros
+
+// const btnReestablecerFiltros = document.getElementById('btnReestablecerFiltros') 
+// btnReestablecerFiltros.addEventListener('onclick', (event) => {
+//   pointsNegativo.value = '1' 
+// })
+
+
+// const filtros = () => {
+//   console.log(pointsBrillo.value)
+// }
+
+
+//***********como lo hizo el profe y ruth ********************//
+
+/////////////////////////////////////
+
+//  const filter = () => {
+  // console.log(brillo.value)
+  // console.log(opacity.value)
+  // brilloP.innerHTML = El valor actual del brillo es: ${brillo.value}%
+  // opacityP.innerHTML = El valor actual del brillo es: ${opacity.value}%
+
+  // img.style.filter = `brightness(${brillo.value}), opacity(${opacity.value})`;
+  
+  ///////////////////////////////////////////////////
+  
+//   const pointsNegativo = document.getElementById('pointsNegativo');
+
+// pointsNegativo.addEventListener('input', (event) => {
+//   const valorActualNegativo = event.target.value;
+//   img.style.filter = `invert(${valorActualNegativo})`
+// })
+
+//********************ATENTA SOFI ******************************/
+const pointsBrillo = document.getElementById('pointsBrillo')
+const pointsOpacidad = document.getElementById('pointsOpacidad')
+const pointsContraste = document.getElementById('pointsContraste')
+const pointsDesenfoque = document.getElementById('pointsDesenfoque')
+const pointsGrises = document.getElementById('pointsGrises')
 const pointsSepia = document.getElementById('pointsSepia');
-
-pointsSepia.addEventListener('input', (event) => {
-  const valorActualSepia = event.target.value;
-  img.style.filter = `sepia(${valorActualSepia}%)`
-})
-
-// filtro Hue-rotation
-
 const pointsHue = document.getElementById('pointsHue');
-
-pointsHue.addEventListener('input', (event) => {
-  const valorActualHue = event.target.value;
-  img.style.filter = `hue-rotation(${valorActualHue}deg)`
-})
-
-//filtro Saturado
-
-const pointsSaturado = document.getElementById('pointsSaturado');
-
-pointsSaturado.addEventListener('input', (event) => {
-  const valorActualSaturado = event.target.value;
-  img.style.filter = `saturation(${valorActualSaturado}%)`
-})
-
-//filtro Negativo invert
+const pointsSaturado = document.getElementById('pointsSaturado')
+// let pointsNegativo = document.getElementById('pointsNegativo')
 
 const pointsNegativo = document.getElementById('pointsNegativo');
 
-pointsNegativo.addEventListener('input', (event) => {
-  const valorActualNegativo = event.target.value;
-  img.style.filter = `invert(${valorActualNegativo})`
-})
+// const filter = () => { 
 
-//btn reestablecer filtros
-
-const btnReestablecerFiltros = document.getElementById('btnReestablecerFiltros') 
-btnReestablecerFiltros.addEventListener('onclick', (event) => {
-  pointsNegativo.value = '1' 
-})
+// }
 
 
-const filtros = () => {
+const filter = () => {
+
   console.log(pointsBrillo.value)
-}
- filtros()
+  // let pointsBrillo = input.target.value
+  img.style.filter = `brightness(${pointsBrillo.value}) opacity(${pointsOpacidad.value}) contrast(${pointsContraste.value}%) blur(${pointsDesenfoque.value}px) grayscale(${pointsGrises.value}%) sepia(${pointsSepia.value}%) hue-rotation(${pointsHue.value}deg) saturation(${pointsSaturado.value}%) invert(${pointsNegativo.value})`
+};
+
+pointsBrillo.addEventListener('input', filter)
+pointsOpacidad.addEventListener('input', filter)
+pointsContraste.addEventListener('input', filter)
+pointsDesenfoque.addEventListener('input', filter)
+pointsGrises.addEventListener('input', filter)
+pointsSepia.addEventListener('input', filter)
+pointsHue.addEventListener('input', filter)
+pointsSaturado.addEventListener('input', filter)
+pointsNegativo.addEventListener('input', filter)
+
+// // dento de la funcion filter, deben meter los filtros que faltan con los valores correspondientes
+// // Cualquier duda que tengan avisenme
 
 //////////////////prueba 2 con filtros apra que se acumulen en la imagen
 // const filtros = () => {
