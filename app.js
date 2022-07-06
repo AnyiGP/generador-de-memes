@@ -78,7 +78,7 @@ btnModoOscuro.addEventListener('input', () => {
   imagenAside.classList.toggle('modo-oscuro3')
 
   for ( let i = 0; i < titulos2.length; i++) {
-    titulos2[i].classList.toggle('modo-oscuro4')
+    titulos2[i].classList.toggle('modo-oscuro4') //lo taigo asi porque es un arreglo
 
   }
   
@@ -139,6 +139,47 @@ document.addEventListener('DOMContentLoaded', function() {
 const img = document.getElementById('img')
 
 //////////////FILTROS//////////////////////////////
+const pointsBrillo = document.getElementById('pointsBrillo')
+const pointsOpacidad = document.getElementById('pointsOpacidad')
+const pointsContraste = document.getElementById('pointsContraste')
+const pointsDesenfoque = document.getElementById('pointsDesenfoque')
+const pointsGrises = document.getElementById('pointsGrises')
+const pointsSepia = document.getElementById('pointsSepia');
+const pointsHue = document.getElementById('pointsHue');
+const pointsSaturado = document.getElementById('pointsSaturado')
+const pointsNegativo = document.getElementById('pointsNegativo');
+
+// const filter = () => { 
+
+// }
+
+const filter = () => {
+  img.style.filter = `
+  brightness(${pointsBrillo.value}) 
+  opacity(${pointsOpacidad.value}) 
+  contrast(${pointsContraste.value}%) 
+  blur(${pointsDesenfoque.value}px) 
+  grayscale(${pointsGrises.value}%) 
+  sepia(${pointsSepia.value}%) 
+  hue-rotate(${pointsHue.value}deg) 
+  saturate(${pointsSaturado.value}%) 
+  invert(${pointsNegativo.value})`;
+};
+
+pointsBrillo.addEventListener('input', filter)
+pointsOpacidad.addEventListener('input', filter)
+pointsContraste.addEventListener('input', filter)
+pointsDesenfoque.addEventListener('input', filter)
+pointsGrises.addEventListener('input', filter)
+pointsSepia.addEventListener('input', filter)
+pointsHue.addEventListener('input', filter)
+pointsSaturado.addEventListener('input', filter)
+pointsNegativo.addEventListener('input', filter)
+
+// // dento de la funcion filter, deben meter los filtros que faltan con los valores correspondientes
+// // Cualquier duda que tengan avisenme
+
+///////////////
 //***********FINCION QUE NADA POR NO ACUMULA********//
 
 
@@ -249,42 +290,6 @@ const img = document.getElementById('img')
 // })
 
 //********************ATENTA SOFI ******************************/
-const pointsBrillo = document.getElementById('pointsBrillo')
-const pointsOpacidad = document.getElementById('pointsOpacidad')
-const pointsContraste = document.getElementById('pointsContraste')
-const pointsDesenfoque = document.getElementById('pointsDesenfoque')
-const pointsGrises = document.getElementById('pointsGrises')
-const pointsSepia = document.getElementById('pointsSepia');
-const pointsHue = document.getElementById('pointsHue');
-const pointsSaturado = document.getElementById('pointsSaturado')
-// let pointsNegativo = document.getElementById('pointsNegativo')
-
-const pointsNegativo = document.getElementById('pointsNegativo');
-
-// const filter = () => { 
-
-// }
-
-
-const filter = () => {
-
-  console.log(pointsBrillo.value)
-  // let pointsBrillo = input.target.value
-  img.style.filter = `brightness(${pointsBrillo.value}) opacity(${pointsOpacidad.value}) contrast(${pointsContraste.value}%) blur(${pointsDesenfoque.value}px) grayscale(${pointsGrises.value}%) sepia(${pointsSepia.value}%) hue-rotation(${pointsHue.value}deg) saturation(${pointsSaturado.value}%) invert(${pointsNegativo.value})`
-};
-
-pointsBrillo.addEventListener('input', filter)
-pointsOpacidad.addEventListener('input', filter)
-pointsContraste.addEventListener('input', filter)
-pointsDesenfoque.addEventListener('input', filter)
-pointsGrises.addEventListener('input', filter)
-pointsSepia.addEventListener('input', filter)
-pointsHue.addEventListener('input', filter)
-pointsSaturado.addEventListener('input', filter)
-pointsNegativo.addEventListener('input', filter)
-
-// // dento de la funcion filter, deben meter los filtros que faltan con los valores correspondientes
-// // Cualquier duda que tengan avisenme
 
 //////////////////prueba 2 con filtros apra que se acumulen en la imagen
 // const filtros = () => {

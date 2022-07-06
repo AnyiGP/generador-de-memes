@@ -6,15 +6,15 @@
 
 ### 👩‍💻 Mi trabajo cuenta con diferentes secciones:
 
-- Barra de navegacion
-- Presentación
-- Mis conocimientos
-- Una cita de una mujer inspiradora.
-- Proyectos (que se iran agregando conforme esten finalizados los modulos)
-- Contactos y formulario
-- Footer
+- xej Barra de navegacion
+- xej Presentación
+- xej Mis conocimientos
+- xej Una cita de una mujer inspiradora.
+- xej Proyectos (que se iran agregando conforme esten finalizados los modulos)
+- xej Contactos y formulario
+- xej Footer
 
-Te dejo el link para que visites mi sitio [Proyecto Final Modulo 1](https://proyecto-final-modulo-1.vercel.app/)
+Te dejo el link para que visites mi sitio [Proyecto Final Modulo 2](https://proyecto-final-modulo-1.vercel.app/)
 
 ![Divider gif](https://media.giphy.com/media/aL6aRLapF5tbZxRTmC/giphy.gif)
 

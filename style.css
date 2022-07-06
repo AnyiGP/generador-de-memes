@@ -354,8 +354,6 @@ input[type="color"]::-webkit-color-swatch {
     display: none;
 } */
 
-/***primer prueba con js**cambia a modo oscuro el body, investigar como hago para hacer el modo oscuro al header***/
-
 .modo-oscuro {
     background-color: #2f3332;
     color: #c6c6c6;
