@@ -48,16 +48,15 @@ btnTxt.addEventListener('click', () => {
   texto.style.display = 'block'
 })
 
-///////////////////modo claro/oscuro///////////////////////
+//**************BOTON CLARO OSCURO***********/
 
-// const btnModoOscuro = document.getElementById('btnModoOscuro')
-// const encabezado = document.getElementById('encabezado')
-// const vistaMeme = document.getElementById('vistaMeme') 
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('select');
+  var instances = M.FormSelect.init(elems);
+})
 
-// btnModoOscuro.addEventListener('click', () => {
-//   encabezado.classList.toggle('modo-oscuro')
-//   vistaMeme.classList.toggle('modo-oscuro')
-// })
+
+//**************modo claro/oscuro**************//
 
 const btnModoOscuro = document.getElementById('btnModoOscuro')
 const encabezado = document.getElementById('encabezado')
@@ -66,9 +65,8 @@ const contenedorBody = document.getElementById('contenedorBody')
 const textoAside = document.getElementById('texto')
 const imagenAside = document.getElementById('imagen')
 const titulos2 = document.querySelectorAll('h2')
-
-console.log(titulos2)
-
+const titulos3 = document.querySelectorAll('h3')
+const option = document.querySelectorAll('option')
 
 btnModoOscuro.addEventListener('input', () => {
   contenedorBody.classList.toggle('modo-oscuro2')
@@ -79,32 +77,24 @@ btnModoOscuro.addEventListener('input', () => {
 
   for ( let i = 0; i < titulos2.length; i++) {
     titulos2[i].classList.toggle('modo-oscuro4') //lo taigo asi porque es un arreglo
+  }
 
+  for ( let i = 0; i < titulos3.length; i++) {
+    titulos3[i].classList.toggle('modo-oscuro4')
+  }
+
+  for ( let i = 0; i < option; i++) {
+    option[i].classList.toggle('modo-oscuro3')
   }
   
   
 })
 
-
-
-
-// btnModoOscuro.addEventListener('click', () => { //el evento click en html se le debe poner el on adelante => onClick
-//   // event.preventDefault();
-//   // console.log('asdnsad')
-//   document.body.classList.add('modo-oscuro'); //probar tb con .toggle que hace q si tiene la clase se la quita y si no la tiene se la pone
-//   // document.body.classList.toggle('una');
-//   document.body.classList.remove('modo-claro');
-// })
-
-
-
 //////////escribir en el meme///////////////////
 
-const TopTextInput = document.getElementById('TopTextInput') // tengo el input de donde tomar la info
-const BotTextInput = document.getElementById('BotTextInput') // tengo el input de donde tomar la info
+const TopTextInput = document.getElementById('TopTextInput') // traigo el input de donde tomar la info
+const BotTextInput = document.getElementById('BotTextInput') // traigo el input de donde tomar la info
 const renderText = document.getElementById('renderText')// Tengo el parrafo donde voy a mostrar lo que escribe el usuario
-
-// const btnModoOscuro = document.getElementById('modo-oscuro'); 
 
 TopTextInput.addEventListener('input', (event) => {
     const textoIngresado = event.target.value;  //ESTO ES LO QUE EL USUARIO EST'A ESCRIBIENDO
@@ -116,9 +106,7 @@ BotTextInput.addEventListener('input', (event) => {
     renderBotText.innerHTML = textoIngresado;
   })
 
-
-
-//Agregar imagen con url
+//**************Agregar imagen con url*************//
 
 // const imagenMeme = document.getElementById('img')
 
@@ -129,16 +117,10 @@ BotTextInput.addEventListener('input', (event) => {
 //   }
 // }
 
-
-document.addEventListener('DOMContentLoaded', function() {
-  var elems = document.querySelectorAll('select');
-  var instances = M.FormSelect.init(elems);
-})
-
 //*******ME TRAIGO LA IMAGEN*******//
 const img = document.getElementById('img')
 
-//////////////FILTROS//////////////////////////////
+//***************FILTROS*******************//
 const pointsBrillo = document.getElementById('pointsBrillo')
 const pointsOpacidad = document.getElementById('pointsOpacidad')
 const pointsContraste = document.getElementById('pointsContraste')
@@ -148,10 +130,6 @@ const pointsSepia = document.getElementById('pointsSepia');
 const pointsHue = document.getElementById('pointsHue');
 const pointsSaturado = document.getElementById('pointsSaturado')
 const pointsNegativo = document.getElementById('pointsNegativo');
-
-// const filter = () => { 
-
-// }
 
 const filter = () => {
   img.style.filter = `

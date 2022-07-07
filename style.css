@@ -300,6 +300,7 @@ input[type="color"]::-webkit-color-swatch {
     border-bottom: solid #2f3332 0.15rem;
     margin-bottom: 1rem;
     margin-top: 1rem;
+    color: red;
 
 }
 
