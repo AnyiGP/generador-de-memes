@@ -27,6 +27,7 @@
         - hue 
         - saturado
         - negativo
+        ![image](./images/Propiedades%20Filtros.png)
     - btn reestablecer filtros
 - btn Editor texto
     - agregar texto superior/input
@@ -48,9 +49,13 @@
 - btn claro oscuro
 - btn descargar imagen
 
+
 ### 👩‍💻 Diagrama de Flujo
 
 ![image](./images/pseudocodigo-diagrama-de-flujo.jpg)
+
+### 👩‍💻 Paleta de colores
+![image](./images/paleta%20de%20colores.png)
 
 Te dejo el link para que visites mi sitio [Proyecto Final Modulo 2](https://anyigp.github.io/GENERADOR-DE-MEMES/)
 
