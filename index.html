@@ -15,15 +15,7 @@
     <header>
         <h1>Generador de Memes</h1>
         <div class="botonesDelHeader">
-            <!-- <button>
-            <div id="btnImg" class="btnImg">
-                <i class="fa-solid fa-image"></i>
-                <input type="button" value='Imagen'>
-            </div>
-            </button>
-             -->
-                
-            <button class="descargarMeme" id="btnImg">
+            <button id="btnImg">
                 <i class="fa-solid fa-image" aria=""></i>
                 Imagen
             </button>
@@ -42,18 +34,16 @@
                 Oscuro
                 </label>
             </button>
-            </div>
+        </div>
     </header>
     </div>
     <main id="vistaMeme" class="">
         <div class="vistaMeme">
-            <p id="renderTopText"
+            <p id="renderTopText" class="txtSuperior"
             >TOP TEXT</p>
-            <div class="contenedorImagenMeme">
-                <img class="img " id="img" src="https://decoraideas.com/wp-content/uploads/2011/07/3.jpg" alt="Imagen Meme">
-                
+            <div class="contenedorImagenMeme" id="img"> <!--ACA TIENE QUE APARECER LA IMAGEN-->
             </div>
-            <p id="renderBotText">BOTTOM TEXT</p>
+            <p id="renderBotText" class="txtInferior">BOTTOM TEXT</p>
             <button class="descargaMeme" id="descargarMeme">
                 <i class="fa-solid fa-download"></i>
                 Descargar Meme
@@ -65,22 +55,17 @@
             
             
     <aside id="barraLateral" class="barraLateral">
-            <a class="waves-effect waves-light btn-small #40c4ff light-blue accent-2">x</a>
-        
+            
             <!--################## TEXTO ###################################-->
         
             <section id="texto" class="controlTexto">
+                <a class="waves-effect waves-light btn-small #40c4ff light-blue accent-2">x</a>
                 <h2>TEXTO</h2>
                 <h3>SUPERIOR</h3>
                 <div id="textoSuperior">
                     <input type="text" value="TOP TEXT" id="TopTextInput" class="textoSuperior">
                 </div>
-                <!-- <div >
-                    <input type="checkbox" name="SinTextoSuperior" id="">
-                    <label for="SinTextoSuperior">Sin Texto Superior</label>
-                </div> -->
-    
-                <p class="sinTextoSuperior">
+                <p class="sinTextoSuperior" id="btnSinTextoSuperior">
                     <label>
                       <input type="checkbox" class="filled-in"/>
                       <span>Sin Texto Superior</span>
@@ -203,7 +188,7 @@
             <h2>IMAGEN</h2>
             <div class="urlImagen">
                 <h3>URL</h3>
-                <div id="img">
+                <div>
                     <input type="text" class="panel-control-input" id="url-img-input" aria-label="URL de imagen">
                 </div>
             </div>
@@ -234,39 +219,39 @@ y despues hay un pseudo-elemento ::-webkit-color-swatch-->
             <div id="filtros" class="filtros">
                 <h3>FILTROS</h3>
                 <div>
-                    <label for="pointsBrillo">Brillo</label>    
+                    <label for="pointsBrillo" id="brilloW">Brillo</label>    
                     <input type="range" name="pointsBrillo" id="pointsBrillo" min="0" max="1" step="0.1" value="1">
                 </div>
                   <div>
-                    <label for="pointsOpacidad">Opacidad:</label>
+                    <label for="pointsOpacidad" id="opacidadW">Opacidad:</label>
                     <input type="range" id="pointsOpacidad" name="pointsOpacidad" min="0" max="1" step="0.1" value="1">
                   </div>
                   <div>
-                    <label for="pointsContraste">Contraste:</label>
+                    <label for="pointsContraste" id="contrasteW">Contraste:</label>
                     <input type="range" id="pointsContraste" name="pointsContraste" min="100" max="1000" step="1" value="100">
                   </div>
                   <div>
-                    <label for="pointsDesenfoque">Desenfoque:</label>
+                    <label for="pointsDesenfoque" id="desenfoqueW">Desenfoque:</label>
                     <input type="range" id="pointsDesenfoque" name="pointsDesenfoque" min="0" max="10" step="0.1" value="0">
                   </div>
                   <div>
-                    <label for="pointsGrises">Grises:</label>
+                    <label for="pointsGrises" id="grisesW">Grises:</label>
                     <input type="range" id="pointsGrises" name="pointsGrises" min="0" max="100" step="1" value="0">
                   </div>
                   <div>
-                    <label for="pointsSepia">Sepia:</label>
+                    <label for="pointsSepia" id="sepiaW">Sepia:</label>
                     <input type="range" id="pointsSepia" name="pointsSepia" min="0" max="100" step="1" value="0">
                   </div>
                   <div>
-                    <label for="pointsHue">Hue:</label>
+                    <label for="pointsHue" id="hueW">Hue:</label>
                     <input type="range" id="pointsHue" name="pointsHue" min="0" max="359" step="1" value="0">
                   </div>
                   <div>
-                    <label for="pointsSaturado">Saturado:</label>
+                    <label for="pointsSaturado" id="saturadoW">Saturado:</label>
                     <input type="range" id="pointsSaturado" name="pointsSaturado" min="100" max="1000" step="10" value="100">
                   </div>
                   <div>
-                    <label for="pointsNegativo">Negativo:</label>
+                    <label for="pointsNegativo" id="negativoW">Negativo:</label>
                     <input type="range" id="pointsNegativo" name="pointsNegativo" min="0" max="1" step="0.1" value="0">
                   </div>
             </div>

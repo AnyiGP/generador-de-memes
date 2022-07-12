@@ -67,6 +67,17 @@ const imagenAside = document.getElementById('imagen')
 const titulos2 = document.querySelectorAll('h2')
 const titulos3 = document.querySelectorAll('h3')
 const option = document.querySelectorAll('option')
+// const label = document.querySelectorAll('label')
+const brilloW = document.getElementById('brilloW')
+const opacidadW = document.getElementById('opacidadW')
+const contrasteW = document.getElementById('contrasteW')
+const desenfoqueW = document.getElementById('desenfoqueW')
+const grisesW = document.getElementById('grisesW')
+const sepiaW = document.getElementById('sepiaW')
+const hueW = document.getElementById('hueW')
+const saturadoW = document.getElementById('saturadoW')
+const negativoW = document.getElementById('negativoW')
+
 
 btnModoOscuro.addEventListener('input', () => {
   contenedorBody.classList.toggle('modo-oscuro2')
@@ -74,6 +85,16 @@ btnModoOscuro.addEventListener('input', () => {
   vistaMeme.classList.toggle('modo-oscuro')
   textoAside.classList.toggle('modo-oscuro3')  
   imagenAside.classList.toggle('modo-oscuro3')
+  brilloW.classList.toggle('modo-oscuro4')
+  opacidadW.classList.toggle('modo-oscuro4')
+  contrasteW.classList.toggle('modo-oscuro4')
+  desenfoqueW.classList.toggle('modo-oscuro4')
+  grisesW.classList.toggle('modo-oscuro4')
+  sepiaW.classList.toggle('modo-oscuro4')
+  hueW.classList.toggle('modo-oscuro4')
+  saturadoW.classList.toggle('modo-oscuro4')
+  negativoW.classList.toggle('modo-oscuro4')
+  
 
   for ( let i = 0; i < titulos2.length; i++) {
     titulos2[i].classList.toggle('modo-oscuro4') //lo taigo asi porque es un arreglo
@@ -87,6 +108,10 @@ btnModoOscuro.addEventListener('input', () => {
     option[i].classList.toggle('modo-oscuro3')
   }
   
+  // for ( let i = 0; i < label; i++) {
+  //   label[i].classList.toggle('modo-oscuro4')
+  // }
+  
   
 })
 
@@ -94,7 +119,6 @@ btnModoOscuro.addEventListener('input', () => {
 
 const TopTextInput = document.getElementById('TopTextInput') // traigo el input de donde tomar la info
 const BotTextInput = document.getElementById('BotTextInput') // traigo el input de donde tomar la info
-const renderText = document.getElementById('renderText')// Tengo el parrafo donde voy a mostrar lo que escribe el usuario
 
 TopTextInput.addEventListener('input', (event) => {
     const textoIngresado = event.target.value;  //ESTO ES LO QUE EL USUARIO EST'A ESCRIBIENDO
@@ -106,19 +130,63 @@ BotTextInput.addEventListener('input', (event) => {
     renderBotText.innerHTML = textoIngresado;
   })
 
+
+//sacar texto superior cuando el usuario haga click
+
+const btnSinTextoSuperior = document.getElementById('btnSinTextoSuperior')
+const renderTopText = document.getElementById('renderTopText')
+
+btnSinTextoSuperior.addEventListener('input', () => {
+  renderTopText.classList.toggle('sinTxtSuperior')
+  console.log(btnSinTextoSuperior)
+}) //funciona pero me lleva todo para arriba
+
+
 //**************Agregar imagen con url*************//
 
-// const imagenMeme = document.getElementById('img')
+const urlImagenMeme = document.getElementById('url-img-input') //me traigo lo que el usuario pega en el input
+const img = document.getElementById('img') //me traigo el lugar donde quiero que aparezca la imagen
+
+urlImagenMeme.addEventListener('input', () => {
+  console.log(urlImagenMeme)
+  img.style = `background-image: url(${urlImagenMeme.value})`
+  // img.style.backgroundImage = url(`${urlImagenMeme}`)
+})
+
+//otra menera seria crear una etiqueta mediante un template string
+//************************************
+// // const imgQueAgregaElUsuario = //que el usuario ingrese la url en el imput
+// const urlImagenMeme = document.getElementById('url-img-input')
+
+// // const muestraImagenEnElDiv = `<div class='imagenAModificar'> ${imgQueAgregaElUsuario}</div>` 
+// const muestraImagenEnElDiv = `<div class='img'> ${urlImagenMeme}</div>` 
+//**************************************
 
 
-// const actualizarImagen = (evento) => {
+// const img = getElementById('img')
+// img.addEventListener('input', () => {
+//   img.style.backgroundImage = url()
+// })
+//*****************************************
+// let urlInput = document.getElementById("url-img-input");
+// let img = document.getElementById("img");
+
+// //Cargar imagen url
+// const imagenMeme = (e) => {
+//   img.style.backgroundImage = "url('" + e.target.value + "')";
+// };
+
+// urlInput.addEventListener("change", imagenMeme);
+//******************************************** */
+
+// const img = (evento) => {
 //   if (evento.target.value.length !== 0) {
-//     $('imagenMeme').style.backgroundImage = `url("${evento.target.value}")`
+//     $('imagenMeme').style.backgroundImage = `url("${evento.value}")`
 //   }
 // }
 
 //*******ME TRAIGO LA IMAGEN*******//
-const img = document.getElementById('img')
+// const img = document.getElementById('img')
 
 //***************FILTROS*******************//
 const pointsBrillo = document.getElementById('pointsBrillo')
@@ -154,205 +222,51 @@ pointsHue.addEventListener('input', filter)
 pointsSaturado.addEventListener('input', filter)
 pointsNegativo.addEventListener('input', filter)
 
-// // dento de la funcion filter, deben meter los filtros que faltan con los valores correspondientes
-// // Cualquier duda que tengan avisenme
-
-///////////////
-//***********FINCION QUE NADA POR NO ACUMULA********//
-
-
-// // //filtro brillo
-
-// const pointsBrillo = document.getElementById('pointsBrillo');
-
-// pointsBrillo.addEventListener('input', (event) => {
-//   img.style.filter = `brightness(${event.target.value})`
-// })
-
-// // //filtro Opacidad
-
-// const pointsOpacidad = document.getElementById('pointsOpacidad');
-
-// pointsOpacidad.addEventListener('input', (event) => {
-//   img.style.filter = `opacity(${event.target.value})`
-// })
-
-// // //filtro contraste
-
-// const pointsContraste = document.getElementById('pointsContraste');
-
-// pointsContraste.addEventListener('input', (event) => {
-//   img.style.filter = `contrast(${event.target.value}%)`
-// })
-
-// // //filtro Desenfoque blur
-
-// const pointsDesenfoque = document.getElementById('pointsDesenfoque');
-
-// pointsDesenfoque.addEventListener('input', (event) => {
-//   img.style.filter = `blur(${event.target.value}px)`
-// })
-
-// // // Filtro escala de grises
-
-// const pointsGrises = document.getElementById('pointsGrises');
-
-// pointsGrises.addEventListener('input', (event) => {
-//   img.style.filter = `grayscale(${event.target.value}%)`
-// })
-
-// // // filtro Sepia
-
-// const pointsSepia = document.getElementById('pointsSepia');
-
-// pointsSepia.addEventListener('input', (event) => {
-//   img.style.filter = `sepia(${event.target.value}%)`
-// })
-
-// // // filtro Hue-rotation
-
-// const pointsHue = document.getElementById('pointsHue');
-
-// pointsHue.addEventListener('input', (event) => {
-//   img.style.filter = `hue-rotation(${event.target.value}deg)`
-// })
-
-// // //filtro Saturado
-
-// const pointsSaturado = document.getElementById('pointsSaturado');
-
-// pointsSaturado.addEventListener('input', (event) => {
-//   img.style.filter = `saturation(${event.target.value}%)`
-// })
-
-// // //filtro Negativo invert
-
-// const pointsNegativo = document.getElementById('pointsNegativo');
-
-// pointsNegativo.addEventListener('input', (event) => {
-//   img.style.filter = `invert(${event.target.value})`
-// })
 
 //*****************btn reestablecer filtros
 
-// const btnReestablecerFiltros = document.getElementById('btnReestablecerFiltros') 
-// btnReestablecerFiltros.addEventListener('onclick', (event) => {
-//   pointsNegativo.value = '1' 
-// })
+const restablecer = (event) => {
+  event.preventDefault()
+  img.style.filter = `brightness(1)`;
+  img.style.filter = `opacity(1)`;
+  img.style.filter = `contrast(100)`;
+  img.style.filter = `blur(0)`;
+  img.style.filter = `grayscale(0)`;
+  img.style.filter = `sepia(0)`;
+  img.style.filter = `saturate(0)`;
+  img.style.filter = `saturate(100)`;
+  img.style.filter = `invert(0)`;
+}
 
+const btnReestablecerFiltros = document.getElementById('btnReestablecerFiltros') 
+btnReestablecerFiltros.addEventListener('click', (event) => {restablecer(event)}) 
 
-// const filtros = () => {
-//   console.log(pointsBrillo.value)
-// }
-
-
-//***********como lo hizo el profe y ruth ********************//
-
-/////////////////////////////////////
-
-//  const filter = () => {
-  // console.log(brillo.value)
-  // console.log(opacity.value)
-  // brilloP.innerHTML = El valor actual del brillo es: ${brillo.value}%
-  // opacityP.innerHTML = El valor actual del brillo es: ${opacity.value}%
-
-  // img.style.filter = `brightness(${brillo.value}), opacity(${opacity.value})`;
-  
-  ///////////////////////////////////////////////////
-  
-//   const pointsNegativo = document.getElementById('pointsNegativo');
-
-// pointsNegativo.addEventListener('input', (event) => {
-//   const valorActualNegativo = event.target.value;
-//   img.style.filter = `invert(${valorActualNegativo})`
-// })
-
-//********************ATENTA SOFI ******************************/
-
-//////////////////prueba 2 con filtros apra que se acumulen en la imagen
-// const filtros = () => {
-
-// //filtro brillo
-// const pointsBrillo = document.getElementById('pointsBrillo');
-
-// pointsBrillo.addEventListener('input', (event) => {
-//   const valorActualBrillo = event.target.value;
-// })
-
-// //filtro Opacidad
-
-// const pointsOpacidad = document.getElementById('pointsOpacidad');
-
-// pointsOpacidad.addEventListener('input', (event) => {
-//   const valorActualOpacidad = event.target.value;
+//como hago para que las bolitas me vuelvan al valor inicial?
+pointsBrillo.value = 1;
+pointsOpacidad.value = 1;
+pointsContraste.value = 100;
+pointsDesenfoque.value = 0;
+pointsGrises.value = 0;
+pointsSepia.value = 0;
+pointsHue.value = 0;
+pointsSaturado.value = 100;
+pointsNegativo.value = 0;
 
 // })
 
-// //filtro contraste
 
-// const pointsContraste = document.getElementById('pointsContraste');
+//**********FONDO TRANSPARENTE**********//
 
-// pointsContraste.addEventListener('input', (event) => {
-//   const valorActualContraste = event.target.value;
-  
-// })
+// const fondoTransCheck = document.getElementById("fondoTransCheck");
 
-// //filtro Desenfoque blur
-
-// const pointsDesenfoque = document.getElementById('pointsDesenfoque');
-
-// pointsDesenfoque.addEventListener('input', (event) => {
-//   const valorActualDesenfoque = event.target.value;
-  
-// })
-
-// // Filtro escala de grises
-
-// const pointsGrises = document.getElementById('pointsGrises');
-
-// pointsGrises.addEventListener('input', (event) => {
-//   const valorActualGrises = event.target.value;
-  
-// })
-
-// // filtro Sepia
-
-// const pointsSepia = document.getElementById('pointsSepia');
-
-// pointsSepia.addEventListener('input', (event) => {
-//   const valorActualSepia = event.target.value;
-  
-// })
-
-// // filtro Hue-rotation
-
-// const pointsHue = document.getElementById('pointsHue');
-
-// pointsHue.addEventListener('input', (event) => {
-//   const valorActualHue = event.target.value;
-  
-// })
-
-// //filtro Saturado
-
-// const pointsSaturado = document.getElementById('pointsSaturado');
-
-// pointsSaturado.addEventListener('input', (event) => {
-//   const valorActualSaturado = event.target.value;
-  
-// })
-
-// //filtro Negativo invert
-
-// const pointsNegativo = document.getElementById('pointsNegativo');
-
-// pointsNegativo.addEventListener('input', (event) => {
-//   const valorActualNegativo = event.target.value;
-  
-// })
-
-// img.style.filter = `brightness(${valorActualBrillo}) opacity(${valorActualOpacidad}) contrast(${valorActualContraste}%) blur(${valorActualDesenfoque}px) grayscale(${valorActualGrises}%) sepia(${valorActualSepia}%) hue-rotation(${valorActualHue}deg) saturation(${valorActualSaturado}%) invert(${valorActualNegativo})` 
-
-// }
-
-// filtros(pointsBrillo, pointsContraste, pointsDesenfoque, pointsGrises, pointsHue, pointsNegativo, pointsOpacidad, pointsSaturado, pointsSepia)
+// fondoTransCheck.addEventListener("click", () => {
+//   if (fondoTransCheck.checked) {
+//     textoFondoTM.classList.add("fondoTrans");
+//     textoFondoBM.classList.add("fondoTrans");
+//   } else {
+//     textoFondoTM.classList.remove("fondoTrans");
+//     textoFondoBM.classList.remove("fondoTrans");
+//   }
+//   // textoFondoTM.classList.toggle("fondoTrans");
+//   //textoFondoBM.classList.toggle("fondoTrans");
+// });
