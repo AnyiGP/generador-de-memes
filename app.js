@@ -139,6 +139,7 @@ const renderTopText = document.getElementById('renderTopText')
 btnSinTextoSuperior.addEventListener('input', () => {
   renderTopText.classList.toggle('sinTxtSuperior')
   console.log(btnSinTextoSuperior)
+  img.classList.toggle('contenedor')
 }) //funciona pero me arrastra todo para arriba
 
 //sacar texto Inferior cuando el usuario haga click
@@ -149,6 +150,7 @@ const renderBotText = document.getElementById('renderBotText')
 btnSinTextoInferior.addEventListener('input', () => {
   renderBotText.classList.toggle('sinTxtInferior')
   console.log(btnSinTextoInferior)
+  img.classList.toggle('contenedor')
 }) //funciona pero me arrastra todo para arriba
 
 
