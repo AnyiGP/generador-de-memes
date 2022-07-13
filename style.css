@@ -91,6 +91,10 @@ h3 {
     display: none;
 }
 
+.sinTxtInferior {
+    display: none;
+}
+
 .contenedorImagenMeme {
     height: 70%;
     background-color: #2f3332;
