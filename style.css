@@ -202,7 +202,13 @@ h3 {
     display: block;
 }
 
-.colorDeFondo {
+.colorDeFuenteYFondo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.colorDeFondoImagen {
     width: 50%;
     height: 2rem;
     margin-right: 1rem;
@@ -212,8 +218,45 @@ h3 {
     border-radius: 0.2rem;
 }
 
+.colorDeFondoImagen span {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    color: #2f3332;
+}
+
+
+.colorDeFondo {
+    width: 90%;
+    height: 2rem;
+    margin-right: 2rem;
+    background-color: #c6c6c6;
+    display: flex;
+    text-align: center;
+    border-radius: 0.2rem;
+}
+
 /*#fafafa*/
 .colorDeFondo span {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    color: #2f3332;
+}
+
+.colorDeFuente {
+    width: 90%;
+    height: 2rem;
+    margin-right: 1rem;
+    margin-left: 0.5rem;
+    background-color: #c6c6c6;
+    display: flex;
+    text-align: center;
+    border-radius: 0.2rem;
+}
+
+/*#fafafa*/
+.colorDeFuente span {
     display: flex;
     text-align: center;
     align-items: center;

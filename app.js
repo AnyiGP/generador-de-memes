@@ -266,6 +266,9 @@ pointsNegativo.value = 0;
 
 // })
 
+//*********COLOR FUENTE *************/
+
+
 
 //**********FONDO TRANSPARENTE**********//
  const inputFondoTransparente = document.getElementById('fondoTransparente')
@@ -279,6 +282,9 @@ pointsNegativo.value = 0;
   img.classList.toggle('transparente')
 }) 
 
+
+
+//*********COLOR FONDO FUENTE *************/
 
 
 
