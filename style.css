@@ -204,14 +204,16 @@ h3 {
 
 .colorDeFuenteYFondo {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    margin-left: -0.5rem;
 }
 
 .colorDeFondoImagen {
     width: 50%;
     height: 2rem;
     margin-right: 1rem;
+    padding-right: 2rem;
     background-color: #c6c6c6;
     display: flex;
     text-align: center;

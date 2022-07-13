@@ -266,8 +266,24 @@ pointsNegativo.value = 0;
 
 // })
 
-//*********COLOR FUENTE *************/
+//*********COLOR FUENTE *************cuando el usuario elija eun color, tiene que cambiar el color de fuente/
+const inputColorFuente = document.getElementById('inputColorFuente')
+const inputColorFondo = document.getElementById('inputColorFondo')
 
+inputColorFuente.addEventListener('input', (e) => {
+  renderTopText.style.color = e.target.value
+  renderBotText.style.color = e.target.value
+})
+
+
+//*********COLOR FONDO FUENTE *************cuando el usuario elija eun color, tiene que cambiar el color de fondo de la fuente/
+
+inputColorFondo.addEventListener('input', (e) => {
+  renderTopText.style.backgroundColor = e.target.value
+  renderBotText.style.backgroundColor = e.target.value
+})
+
+///INVESTIGAR COMO HACER QUE ME IMPRIMA EL NUMERO DE COLOR
 
 
 //**********FONDO TRANSPARENTE**********//
