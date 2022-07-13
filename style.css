@@ -95,11 +95,20 @@ h3 {
     height: 85% !important;
 }
 
+.contenedorTotal {
+    height: 100%;
+    position: relative;
+    
+}
+
 .contenedorImagenMeme {
     height: 70%;
     background-color: #2f3332;
 }
 
+.transparente {
+    background-color: transparent;
+}
 
 
 #img {

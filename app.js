@@ -151,8 +151,7 @@ btnSinTextoInferior.addEventListener('input', () => {
   renderBotText.classList.toggle('sinTxtInferior')
   console.log(btnSinTextoInferior)
   img.classList.toggle('contenedor')
-}) //funciona pero me arrastra todo para arriba
-
+}) 
 
 
 //**************Agregar imagen con url*************//
@@ -269,6 +268,38 @@ pointsNegativo.value = 0;
 
 
 //**********FONDO TRANSPARENTE**********//
+ const inputFondoTransparente = document.getElementById('fondoTransparente')
+
+ inputFondoTransparente.classList.toggle('transparente')
+
+ inputFondoTransparente.addEventListener('input', () => {
+  renderBotText.classList.toggle('transparente')
+  renderTopText.classList.toggle('transparente')
+  img.classList.toggle('contenedorTotal')
+  img.classList.toggle('transparente')
+}) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // const fondoTransCheck = document.getElementById("fondoTransCheck");
 
