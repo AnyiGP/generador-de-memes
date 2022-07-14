@@ -108,11 +108,6 @@ btnModoOscuro.addEventListener('input', () => {
     option[i].classList.toggle('modo-oscuro3')
   }
   
-  // for ( let i = 0; i < label; i++) {
-  //   label[i].classList.toggle('modo-oscuro4')
-  // }
-  
-  
 })
 
 //////////escribir en el meme///////////////////
@@ -140,7 +135,7 @@ btnSinTextoSuperior.addEventListener('input', () => {
   renderTopText.classList.toggle('sinTxtSuperior')
   console.log(btnSinTextoSuperior)
   img.classList.toggle('contenedor')
-}) //funciona pero me arrastra todo para arriba
+}) 
 
 //sacar texto Inferior cuando el usuario haga click
 
@@ -152,6 +147,9 @@ btnSinTextoInferior.addEventListener('input', () => {
   console.log(btnSinTextoInferior)
   img.classList.toggle('contenedor')
 }) 
+
+//funciona pero me arrastra todo para arriba cuando aprieto las 2 opciones
+
 
 
 //**************Agregar imagen con url*************//
@@ -300,9 +298,13 @@ inputColorFondo.addEventListener('input', (e) => {
 
 
 
-//*********COLOR FONDO FUENTE *************/
+//*********COLOR FONDO imagen *************/
 
+const inputColorFondoImagen = document.getElementById('inputColorFondoImagen')
 
+inputColorFondoImagen.addEventListener('input', (e) => {
+  img.style.backgroundColor = e.target.value
+})
 
 
 
