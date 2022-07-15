@@ -344,7 +344,42 @@ inputColorFondo.addEventListener('input', (e) => {
   img.classList.toggle('transparente')
 }) 
 
+//***********ELEGIR TIPO DE FUENTE NF************/
 
+const selectEstiloFuente = document.getElementById('selectEstiloFuente') 
+
+selectEstiloFuente.addEventListener('input', (e) => {
+  renderBotText.style.fontFamily = e.target.value
+  renderTopText.style.fontFamily = e.target.value
+})
+
+//***********ELEGIR TAMANIO DE FUENTE NF ************/
+
+const tamanioFuente = document.getElementById('tamanioFuente')
+
+tamanioFuente.addEventListener('input', (e) => {
+  console.log(e)
+  renderBotText.style.fontSize = e.target.value
+})
+
+// const actualizarTamanioFuente = () => {
+//   const tamanio = $('tamanioFuente').value
+
+//   $('renderBotText').style.fontSize = `${tamanio}px`
+//   $('renderTopText').style.fontSize = `${tamanio}px`
+// }
+
+
+// const imprimirTamanio = () => {
+//   renderBotText.style.fontSize = `
+//   ${tamanioFuente.value}`;
+// };
+
+// tamanioFuente.addEventListener('input', imprimirTamanio)
+
+
+
+//*********elegir alineado de texto **************/
 
 //*********COLOR FONDO imagen *************/
 

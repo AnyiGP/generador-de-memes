@@ -98,8 +98,8 @@
             
                 <h3>FUENTE</h3>
                 <div class="estiloFuente input-field col s12">
-                    <select>
-                      <option value="Estilo Fuente" disabled selected>Estilo Fuente</option>
+                    <select id="selectEstiloFuente">
+                      <option value="" disabled selected>Estilo Fuente</option>
                       <option value="Arial">Arial</option>
                       <option value="Arial Black">Arial Black</option>
                       <option value="American Typewriter">American Typewriter</option>
@@ -115,7 +115,7 @@
     
                 <div class="sizeAlineado">  
                 <div class="size">
-                    <input type="number" placeholder="24">
+                    <input id="tamanioFuente" type="number" value='40' placeholder="24" min="12">
                 </div>
                 <div class="alineadoTexto">
                     <button>
