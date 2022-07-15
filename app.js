@@ -48,6 +48,8 @@ btnTxt.addEventListener('click', () => {
   texto.style.display = 'block'
 })
 
+//********BTN CERRAR TEXTO O IMAGEN ************/
+
 //**************BOTON CLARO OSCURO***********/
 
 document.addEventListener('DOMContentLoaded', function() {

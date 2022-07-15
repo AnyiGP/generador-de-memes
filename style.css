@@ -55,6 +55,7 @@ h3 {
 }
 
 .main {
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -63,7 +64,7 @@ h3 {
 
 .vistaMeme {
     position: absolute;
-    top: 25vh;
+    top: 20vw;
     left: 30vw;
     width: 30vw;
     height: 30vw;
@@ -460,4 +461,42 @@ button label {
 
 .modo-oscuro4 {
     color: #c6c6c6 !important;
+}
+
+
+.btnCerrarMio {
+    display: none;
+}
+
+@media screen and (max-width: 480px) {
+    .contenedorBody {
+        width: 100%;
+    }
+
+    .encabezado {
+        width: 100%;
+    }
+
+    .vistaMeme {
+        width: 80vw;
+        height: 80vw;
+        position: relative;
+        left: 10vw;
+        top: 40vw;
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .controlImagen,
+    .controlTexto {
+        display: none;
+        width: 100vw;
+        height: 100%;
+    /* position: relative; */
+    }
+
+    .btnCerrarMio {
+        display: block;
+    }
 }
