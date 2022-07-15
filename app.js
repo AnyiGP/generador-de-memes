@@ -264,6 +264,54 @@ pointsNegativo.value = 0;
 
 // })
 
+//**********MEZCLADOR DE FONDO E IMAGEN **********/ DEBE FUNCIONAR COMO LOS FILTROS DE MAS ARRIBA
+// // PRIMER INTENTO NF
+// const mezclador = document.getElementById('mezclador')
+
+// mezclador.addEventListener('select', (e) => {
+//   //cuando seleccione una opcion imprima la mezcla en la imagen
+//   img.style.backgroundBlendMode = e.target.value
+  
+//   //`nombreDelFiltro(${variable.value})`
+//   // `
+//   // normal(${value})
+//   // lighten(${})
+
+
+//   // `
+// }
+// )
+
+//SEGUNDO INTENTO CON EJ DE MOZZILA
+
+document.getElementById('mezclador').onchange = function(e) {
+  document.getElementById('img').style.backgroundBlendMode = document.getElementById('mezclador').selectedOptions[0].innerHTML
+}
+
+console.log(document.getElementById('img'));
+
+
+// mezclador.addEventListener('select', (e) => {
+//   //cuando seleccione una opcion imprima la mezcla en la imagen
+//   img.style.backgroundBlendMode = e.target.value
+  
+//   //`nombreDelFiltro(${variable.value})`
+//   // `
+//   // normal(${value})
+//   // lighten(${})
+
+
+//   // `
+// }
+// )
+
+
+// //**********ej mozzila
+// document.getElementById("select").onchange = function(event) {
+//   document.getElementById("div").style.backgroundBlendMode = document.getElementById("select").selectedOptions[0].innerHTML;
+// }
+// console.log(document.getElementById('div'));
+
 //*********COLOR FUENTE *************cuando el usuario elija eun color, tiene que cambiar el color de fuente/
 const inputColorFuente = document.getElementById('inputColorFuente')
 const inputColorFondo = document.getElementById('inputColorFondo')

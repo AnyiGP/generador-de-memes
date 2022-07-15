@@ -113,11 +113,12 @@ h3 {
 
 #img {
     width: 100%;
-    /* flex-grow: 1; */
+    /* flex-grow: 1;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    display: flex;
+    display: flex; */
+    background: url('https://th.bing.com/th/id/R.b94d0ccddfcc4f1e55bf80217b786774?rik=zXz7MPampO9q1g&riu=http%3a%2f%2fbigwnews.com%2fwp-content%2fuploads%2f2018%2f05%2fAngry-Cat-via-India-heritate-site-and-culture-on-YouTube.jpg&ehk=JDwViCJLcEI8n70XJ82kEIwW2M%2bNJ4MB3cHIMTHsSes%3d&risl=&pid=ImgRaw&r=0');
 }
 
 /*#caja-imagen{
