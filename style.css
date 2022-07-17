@@ -518,7 +518,7 @@ button label {
         height: 80vw;
         position: absolute;
         left: 10vw;
-        top: 40vw;
+        margin-top: 20vh;
         display: block;
         justify-content: center;
         align-items: center;
