@@ -483,7 +483,7 @@ button label {
         height: 80vw;
         position: absolute;
         left: 10vw;
-        top: 30vh;
+        margin-top: 35vh;
         display: block;
         justify-content: center;
         align-items: center;
@@ -545,24 +545,7 @@ button label {
         height: 40vw;
         position: absolute;
         left: 25vw;
-        top: 30vw;
-        display: block;
-        justify-content: center;
-        align-items: center;
-        
-    }
-    
-}
-
-/*RESPONSIVE - BREACKPOINT 3*/
-
-@media screen and (min-width: 1221px) and (max-width: 1700px) {
-    .vistaMeme {
-        width: 30vw;
-        height: 30vw;
-        position: absolute;
-        left: 30vw;
-        top: 15vw;
+        margin-top: 10vh;
         display: block;
         justify-content: center;
         align-items: center;
