@@ -64,7 +64,7 @@ h3 {
 
 .vistaMeme {
     position: absolute;
-    top: 20vw;
+    top: 13vw;
     left: 30vw;
     width: 30vw;
     height: 30vw;
@@ -98,8 +98,7 @@ h3 {
 
 .contenedorTotal {
     height: 100%;
-    position: relative;
-    
+    position: relative;   
 }
 
 .contenedorImagenMeme {
@@ -113,13 +112,13 @@ h3 {
 
 
 #img {
-    width: 100%;
-    /* flex-grow: 1;
-    background-size: cover;
-    background-position: center;
+    /* flex-grow: 1;*/
+    background-size: 10vw;
+    /* background-position: center;
     background-repeat: no-repeat;
     display: flex; */
     background: url('https://th.bing.com/th/id/R.b94d0ccddfcc4f1e55bf80217b786774?rik=zXz7MPampO9q1g&riu=http%3a%2f%2fbigwnews.com%2fwp-content%2fuploads%2f2018%2f05%2fAngry-Cat-via-India-heritate-site-and-culture-on-YouTube.jpg&ehk=JDwViCJLcEI8n70XJ82kEIwW2M%2bNJ4MB3cHIMTHsSes%3d&risl=&pid=ImgRaw&r=0');
+    background-blend-mode: screen;
 }
 
 /*#caja-imagen{
@@ -468,7 +467,10 @@ button label {
     display: none;
 }
 
-@media screen and (max-width: 480px) {
+
+/*RESPONSIVE - BREACKPOINT 1*/
+
+@media screen and (max-width: 600px) {
     .contenedorBody {
         width: 100%;
     }
@@ -480,9 +482,9 @@ button label {
     .vistaMeme {
         width: 80vw;
         height: 80vw;
-        position: relative;
+        position: absolute;
         left: 10vw;
-        top: 40vw;
+        top: 30vh;
         display: block;
         justify-content: center;
         align-items: center;
@@ -499,4 +501,56 @@ button label {
     .btnCerrarMio {
         display: block;
     }
+}
+
+/*RESPONSIVE - BREACKPOINT 2*/
+
+
+@media screen and (min-width: 601px) and (max-width: 710px) {
+    .vistaMeme {
+        width: 50vw;
+        height: 50vw;
+        position: absolute;
+        left: 10vw;
+        top: 30vh;
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+    
+}
+
+
+/*RESPONSIVE - BREACKPOINT 3*/
+
+@media screen and (min-width: 711px) and (max-width: 1220px) {
+    .vistaMeme {
+        width: 40vw;
+        height: 40vw;
+        position: absolute;
+        left: 25vw;
+        top: 15vw;
+        display: block;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    
+}
+
+/*RESPONSIVE - BREACKPOINT 3*/
+
+@media screen and (min-width: 1221px) and (max-width: 1700px) {
+    .vistaMeme {
+        width: 30vw;
+        height: 30vw;
+        position: absolute;
+        left: 30vw;
+        top: 15vw;
+        display: block;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    
 }
