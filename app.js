@@ -64,15 +64,12 @@ btnCerrarImagen.addEventListener('click', (e) => {
 
 
 //**************BOTON CLARO OSCURO***********/
-
 document.addEventListener('DOMContentLoaded', function() {
   var elems = document.querySelectorAll('select');
   var instances = M.FormSelect.init(elems);
 })
 
-
-//**************modo claro/oscuro**************//
-
+//**************MODO CLARO/OSCURO**************//
 const btnModoOscuro = document.getElementById('btnModoOscuro')
 const encabezado = document.getElementById('encabezado')
 const vistaMeme = document.getElementById('vistaMeme')
@@ -82,7 +79,6 @@ const imagenAside = document.getElementById('imagen')
 const titulos2 = document.querySelectorAll('h2')
 const titulos3 = document.querySelectorAll('h3')
 const option = document.querySelectorAll('option')
-// const label = document.querySelectorAll('label')
 const brilloW = document.getElementById('brilloW')
 const opacidadW = document.getElementById('opacidadW')
 const contrasteW = document.getElementById('contrasteW')
@@ -92,7 +88,6 @@ const sepiaW = document.getElementById('sepiaW')
 const hueW = document.getElementById('hueW')
 const saturadoW = document.getElementById('saturadoW')
 const negativoW = document.getElementById('negativoW')
-
 
 btnModoOscuro.addEventListener('input', () => {
   contenedorBody.classList.toggle('modo-oscuro2')
@@ -109,10 +104,9 @@ btnModoOscuro.addEventListener('input', () => {
   hueW.classList.toggle('modo-oscuro4')
   saturadoW.classList.toggle('modo-oscuro4')
   negativoW.classList.toggle('modo-oscuro4')
-  
 
   for ( let i = 0; i < titulos2.length; i++) {
-    titulos2[i].classList.toggle('modo-oscuro4') //lo taigo asi porque es un arreglo
+    titulos2[i].classList.toggle('modo-oscuro4')
   }
 
   for ( let i = 0; i < titulos3.length; i++) {
@@ -122,10 +116,9 @@ btnModoOscuro.addEventListener('input', () => {
   for ( let i = 0; i < option; i++) {
     option[i].classList.toggle('modo-oscuro3')
   }
-  
 })
 
-//////////escribir en el meme///////////////////
+//**************ESCRIBIR TEXTO**************//
 
 const TopTextInput = document.getElementById('TopTextInput') // traigo el input de donde tomar la info
 const BotTextInput = document.getElementById('BotTextInput') // traigo el input de donde tomar la info
@@ -141,8 +134,7 @@ BotTextInput.addEventListener('input', (event) => {
   })
 
 
-//sacar texto superior cuando el usuario haga click
-
+//**************SACAR TEXTO SUPERIOR**************//
 const btnSinTextoSuperior = document.getElementById('btnSinTextoSuperior')
 const renderTopText = document.getElementById('renderTopText')
 
@@ -152,8 +144,7 @@ btnSinTextoSuperior.addEventListener('input', () => {
   img.classList.toggle('contenedor')
 }) 
 
-//sacar texto Inferior cuando el usuario haga click
-
+//**************SACAR TEXTO INFERIOR**************//
 const btnSinTextoInferior = document.getElementById('btnSinTextoInferior')
 const renderBotText = document.getElementById('renderBotText')
 
@@ -163,12 +154,9 @@ btnSinTextoInferior.addEventListener('input', () => {
   img.classList.toggle('contenedor')
 }) 
 
-//funciona pero me arrastra todo para arriba cuando aprieto las 2 opciones
+//!!!!funciona pero me arrastra todo para arriba cuando aprieto las 2 opciones
 
-
-
-//**************Agregar imagen con url*************//
-
+//**************AGREGAR IMAGEN CON URL**************//
 const urlImagenMeme = document.getElementById('url-img-input') //me traigo lo que el usuario pega en el input
 const img = document.getElementById('img') //me traigo el lugar donde quiero que aparezca la imagen
 
@@ -213,7 +201,7 @@ urlImagenMeme.addEventListener('input', () => {
 //*******ME TRAIGO LA IMAGEN*******//
 // const img = document.getElementById('img')
 
-//***************FILTROS*******************//
+//***************FILTROS***************//
 const pointsBrillo = document.getElementById('pointsBrillo')
 const pointsOpacidad = document.getElementById('pointsOpacidad')
 const pointsContraste = document.getElementById('pointsContraste')
@@ -248,8 +236,7 @@ pointsSaturado.addEventListener('input', filter)
 pointsNegativo.addEventListener('input', filter)
 
 
-//*****************btn reestablecer filtros
-
+//***************BTN RESTABLECER FILTROS***************//
 const restablecer = (event) => {
   event.preventDefault()
   img.style.filter = `brightness(1)`;
@@ -266,7 +253,7 @@ const restablecer = (event) => {
 const btnReestablecerFiltros = document.getElementById('btnReestablecerFiltros') 
 btnReestablecerFiltros.addEventListener('click', (event) => {restablecer(event)}) 
 
-//como hago para que las bolitas me vuelvan al valor inicial?
+//!!!!como hago para que las bolitas me vuelvan al valor inicial?
 pointsBrillo.value = 1;
 pointsOpacidad.value = 1;
 pointsContraste.value = 100;
@@ -327,7 +314,7 @@ console.log(document.getElementById('img'));
 // }
 // console.log(document.getElementById('div'));
 
-//*********COLOR FUENTE *************cuando el usuario elija eun color, tiene que cambiar el color de fuente/
+//***************COLOR FUENTE***************//
 const inputColorFuente = document.getElementById('inputColorFuente')
 const inputColorFondo = document.getElementById('inputColorFondo')
 
@@ -337,17 +324,14 @@ inputColorFuente.addEventListener('input', (e) => {
 })
 
 
-//*********COLOR FONDO FUENTE *************cuando el usuario elija eun color, tiene que cambiar el color de fondo de la fuente/
-
+//***************COLOR FONDO FUENTE***************//
 inputColorFondo.addEventListener('input', (e) => {
   renderTopText.style.backgroundColor = e.target.value
   renderBotText.style.backgroundColor = e.target.value
 })
+///!!!!INVESTIGAR COMO HACER QUE ME IMPRIMA EL NUMERO DE COLOR
 
-///INVESTIGAR COMO HACER QUE ME IMPRIMA EL NUMERO DE COLOR
-
-
-//**********FONDO TRANSPARENTE**********//
+//***************FONDO TRANSPARENTE***************//
  const inputFondoTransparente = document.getElementById('fondoTransparente')
 
  inputFondoTransparente.classList.toggle('transparente')
@@ -359,8 +343,7 @@ inputColorFondo.addEventListener('input', (e) => {
   img.classList.toggle('transparente')
 }) 
 
-//***********ELEGIR TIPO DE FUENTE NF************/
-
+//***************ELEGIR TIPO DE FUENTE NF***************//
 const selectEstiloFuente = document.getElementById('selectEstiloFuente') 
 
 selectEstiloFuente.addEventListener('input', (e) => {
@@ -368,8 +351,7 @@ selectEstiloFuente.addEventListener('input', (e) => {
   renderTopText.style.fontFamily = e.target.value
 })
 
-//***********ELEGIR TAMANIO DE FUENTE NF ************/
-
+//***************ELEGIR TAMANIO DE FUENTE NF***************//
 const tamanioFuente = document.getElementById('tamanioFuente')
 
 tamanioFuente.addEventListener('input', (e) => {
@@ -392,11 +374,19 @@ tamanioFuente.addEventListener('input', (e) => {
 
 // tamanioFuente.addEventListener('input', imprimirTamanio)
 
+//***************ALINEADO DE TEXTO NF***************//
+const alineadoTexto = document.getElementById('alineadoTexto')
+const alineadoDerecha = document.getElementById('alineadoDerecha')
+const alineadoIzquierda = document.getElementById('alineadoIzquierda')
+const alineadoCentro = document.getElementById('alineadoCentro')
 
+alineadoDerecha.addEventListener('click', () => {
+  renderTopText.style.alignItems = 'flex-end'
+  console.log(alineadoDerecha)
+  renderTopText.style.textAlign = 'right' //NO FUNCIONA!!!
+})
 
-//*********elegir alineado de texto **************/
-
-//*********COLOR FONDO imagen *************/
+//***************COLOR FONDO IMAGEN***************//
 
 const inputColorFondoImagen = document.getElementById('inputColorFondoImagen')
 
