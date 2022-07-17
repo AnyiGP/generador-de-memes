@@ -48,7 +48,20 @@ btnTxt.addEventListener('click', () => {
   texto.style.display = 'block'
 })
 
-//********BTN CERRAR TEXTO O IMAGEN ************/
+//********BTN CERRAR TEXTO************/
+ const btnCerrarTexto = document.getElementById('btnCerrarTexto')
+ 
+ btnCerrarTexto.addEventListener('click', (e) => {
+    texto.style.display = 'none'
+})
+
+//********BTN CERRAR IMAGEN************/
+const btnCerrarImagen = document.getElementById('btnCerrarImagen')
+ 
+btnCerrarImagen.addEventListener('click', (e) => {
+   imagen.style.display = 'none'
+})
+
 
 //**************BOTON CLARO OSCURO***********/
 
