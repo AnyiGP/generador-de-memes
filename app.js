@@ -425,3 +425,9 @@ interlineado.addEventListener('click', (interlineado) => {
 })
 
 //***************DESCARGAR MEME***************//
+
+const descargarMeme = document.getElementById('descargarMeme')
+
+descargarMeme.addEventListener('click', () => {
+  
+})
