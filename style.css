@@ -139,11 +139,18 @@ h3 {
 
 .descargaMeme {
     border-style: none;
-    width: 60%;
+    width: 20%;
     margin: 1rem;
     padding: 0.5rem;
     color: #2f3332;
     background-color: #6bd8fa;
+    position: absolute;
+    left: 34%;
+    bottom: 1rem;
+    margin-top: 35vh;
+    display: block;
+    justify-content: center;
+    align-items: center;
 }
 
 .barraLateral a {

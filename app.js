@@ -307,14 +307,12 @@ selectEstiloFuente.addEventListener('change', (e) => {
   renderTopText.style.fontFamily = e.target.value
 })
 
-//***************ELEGIR TAMANIO DE FUENTE NF***************//
+//***************ELEGIR TAMANIO DE FUENTE***************//
 const tamanioFuente = document.getElementById('tamanioFuente')
 
 tamanioFuente.addEventListener('input', (e) => {
-  console.log(e)
-  // const tamanio = e.target.value
-  // renderBotText.style.fontSize = tamanio
-  renderBotText.style.fontSize = e.target.value
+  renderTopText.style.fontSize = `${e.target.value}px`
+  renderBotText.style.fontSize = `${e.target.value}px`
 })
 
 
@@ -394,8 +392,7 @@ interlineado.addEventListener('click', (interlineado) => {
 
 //***************DESCARGAR MEME***************//
 
-const descargarMeme = document.getElementById('descargarMeme')
+const btnDescargarMeme = document.getElementById('btnDescargarMeme')
 
-descargarMeme.addEventListener('click', () => {
-
-})
+btnDescargarMeme.addEventListener('click', () => 
+  domtoimage.toBlob(document.getElementById('vistaMeme')).then((blob) => saveAs(blob, 'mi-meme.png')))
