@@ -119,7 +119,6 @@ btnModoOscuro.addEventListener('input', () => {
 })
 
 //**************ESCRIBIR TEXTO**************//
-
 const TopTextInput = document.getElementById('TopTextInput') // traigo el input de donde tomar la info
 const BotTextInput = document.getElementById('BotTextInput') // traigo el input de donde tomar la info
 
@@ -156,7 +155,7 @@ btnSinTextoInferior.addEventListener('input', () => {
 
 //!!!!funciona pero me arrastra todo para arriba cuando aprieto las 2 opciones
 
-//**************AGREGAR IMAGEN CON URL**************//
+//**************AGREGAR IMAGEN CON URL NF**************//
 const urlImagenMeme = document.getElementById('url-img-input') //me traigo lo que el usuario pega en el input
 const img = document.getElementById('img') //me traigo el lugar donde quiero que aparezca la imagen
 
@@ -266,7 +265,16 @@ pointsNegativo.value = 0;
 
 // })
 
-//**********MEZCLADOR DE FONDO E IMAGEN **********/ DEBE FUNCIONAR COMO LOS FILTROS DE MAS ARRIBA
+
+//***************COLOR FONDO IMAGEN***************//
+const inputColorFondoImagen = document.getElementById('inputColorFondoImagen')
+
+inputColorFondoImagen.addEventListener('input', (e) => {
+  img.style.backgroundColor = e.target.value
+})
+
+
+//**********MEZCLADOR DE FONDO E IMAGEN **********// DEBE FUNCIONAR COMO LOS FILTROS DE MAS ARRIBA
 // // PRIMER INTENTO NF
 // const mezclador = document.getElementById('mezclador')
 
@@ -323,7 +331,6 @@ inputColorFuente.addEventListener('input', (e) => {
   renderBotText.style.color = e.target.value
 })
 
-
 //***************COLOR FONDO FUENTE***************//
 inputColorFondo.addEventListener('input', (e) => {
   renderTopText.style.backgroundColor = e.target.value
@@ -356,8 +363,11 @@ const tamanioFuente = document.getElementById('tamanioFuente')
 
 tamanioFuente.addEventListener('input', (e) => {
   console.log(e)
+  // const tamanio = e.target.value
+  // renderBotText.style.fontSize = tamanio
   renderBotText.style.fontSize = e.target.value
 })
+
 
 // const actualizarTamanioFuente = () => {
 //   const tamanio = $('tamanioFuente').value
@@ -404,57 +414,24 @@ contornoClaro.addEventListener('click', () => {
 contornoOscuro.addEventListener('click', () => {
   renderTopText.style.textShadow = 'black 2px 2px, black -2px 2px, black 2px -2px, black -2px -2px'
   renderBotText.style.textShadow = 'black 2px 2px, black -2px 2px, black 2px -2px, black -2px -2px'
-  
-  // renderTopText.classList.add('contornoOscuro')
-  // renderBotText.classList.add('contornoOscuro')
 })
 
+//***************ESPACIADO DE TEXTO NF***************//
+const espaciado = document.getElementById('espaciado')
 
-//***************ESPACIADO DE TEXTO***************//
-
-
-
-//***************INTERLINEADO DE TEXTO***************//
-
-
-
-//***************COLOR FONDO IMAGEN***************//
-
-const inputColorFondoImagen = document.getElementById('inputColorFondoImagen')
-
-inputColorFondoImagen.addEventListener('input', (e) => {
-  img.style.backgroundColor = e.target.value
+espaciado.addEventListener('input', (e) => {
+  console.log(espaciado)
+  renderTopText.style.padding = e.target.value
+  renderBotText.style.padding = e.target.value
 })
 
+//***************INTERLINEADO DE TEXTO NF***************//
+const interlineado = document.getElementById('interlineado')
 
+interlineado.addEventListener('click', (interlineado) => {
+  console.log(interlineado)
+  renderTopText.style.lineHeight = interlineado.target.value
+  renderBotText.style.lineHeight = interlineado.target.value
+})
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const fondoTransCheck = document.getElementById("fondoTransCheck");
-
-// fondoTransCheck.addEventListener("click", () => {
-//   if (fondoTransCheck.checked) {
-//     textoFondoTM.classList.add("fondoTrans");
-//     textoFondoBM.classList.add("fondoTrans");
-//   } else {
-//     textoFondoTM.classList.remove("fondoTrans");
-//     textoFondoBM.classList.remove("fondoTrans");
-//   }
-//   // textoFondoTM.classList.toggle("fondoTrans");
-//   //textoFondoBM.classList.toggle("fondoTrans");
-// });
+//***************DESCARGAR MEME***************//
