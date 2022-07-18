@@ -363,6 +363,10 @@ button label {
     height: 1rem;
 }
 
+.alineadoDerecha {
+    text-align: right;
+}
+
 .textoSuperior ,
 .textoInferior {
     width: 100%;

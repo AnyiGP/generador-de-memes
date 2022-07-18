@@ -62,7 +62,6 @@ btnCerrarImagen.addEventListener('click', (e) => {
    imagen.style.display = 'none'
 })
 
-
 //**************BOTON CLARO OSCURO***********/
 document.addEventListener('DOMContentLoaded', function() {
   var elems = document.querySelectorAll('select');
@@ -131,7 +130,6 @@ BotTextInput.addEventListener('input', (event) => {
     const textoIngresado = event.target.value;  //ESTO ES LO QUE EL USUARIO EST'A ESCRIBIENDO
     renderBotText.innerHTML = textoIngresado;
   })
-
 
 //**************SACAR TEXTO SUPERIOR**************//
 const btnSinTextoSuperior = document.getElementById('btnSinTextoSuperior')
@@ -286,20 +284,15 @@ inputColorFondoImagen.addEventListener('input', (e) => {
 //   // `
 //   // normal(${value})
 //   // lighten(${})
-
-
 //   // `
-// }
-// )
+// })
 
 //SEGUNDO INTENTO CON EJ DE MOZZILA
-
 document.getElementById('mezclador').onchange = function(e) {
   document.getElementById('img').style.backgroundBlendMode = document.getElementById('mezclador').selectedOptions[0].innerHTML
 }
 
 console.log(document.getElementById('img'));
-
 
 // mezclador.addEventListener('select', (e) => {
 //   //cuando seleccione una opcion imprima la mezcla en la imagen
@@ -309,12 +302,8 @@ console.log(document.getElementById('img'));
 //   // `
 //   // normal(${value})
 //   // lighten(${})
-
-
 //   // `
-// }
-// )
-
+// })
 
 // //**********ej mozzila
 // document.getElementById("select").onchange = function(event) {
@@ -391,9 +380,10 @@ const alineadoIzquierda = document.getElementById('alineadoIzquierda')
 const alineadoCentro = document.getElementById('alineadoCentro')
 
 alineadoDerecha.addEventListener('click', () => {
-  renderTopText.style.alignItems = 'flex-end'
-  console.log(alineadoDerecha)
-  renderTopText.style.textAlign = 'right' //NO FUNCIONA!!!
+  // renderTopText.style.alignItems = 'flex-end'
+  // console.log(alineadoDerecha)
+  // renderTopText.style.textAlign = 'right' //NO FUNCIONA!!!
+  renderTopText.classList.add('alineadoDerecha')
 })
 
 //***************CONTORNO DE TEXTO***************//
