@@ -151,50 +151,16 @@ btnSinTextoInferior.addEventListener('input', () => {
   img.classList.toggle('contenedor')
 }) 
 
-//!!!!funciona pero me arrastra todo para arriba cuando aprieto las 2 opciones
+//!!!!funciona pero me arrastra todo para arriba cuando aprieto las 2 opciones debe ser por el div de absolute
 
-//**************AGREGAR IMAGEN CON URL NF**************//
-const urlImagenMeme = document.getElementById('url-img-input') //me traigo lo que el usuario pega en el input
-const img = document.getElementById('img') //me traigo el lugar donde quiero que aparezca la imagen
+//**************AGREGAR IMAGEN CON URL**************//
+const urlImagenMeme = document.getElementById('url-img-input')
+const img = document.getElementById('img')
 
 urlImagenMeme.addEventListener('input', () => {
   console.log(urlImagenMeme)
   img.style = `background-image: url(${urlImagenMeme.value})`
-  // img.style.backgroundImage = url(`${urlImagenMeme}`)
 })
-
-//otra menera seria crear una etiqueta mediante un template string
-//************************************
-// // const imgQueAgregaElUsuario = //que el usuario ingrese la url en el imput
-// const urlImagenMeme = document.getElementById('url-img-input')
-
-// // const muestraImagenEnElDiv = `<div class='imagenAModificar'> ${imgQueAgregaElUsuario}</div>` 
-// const muestraImagenEnElDiv = `<div class='img'> ${urlImagenMeme}</div>` 
-//**************************************
-// const img = getElementById('img')
-// img.addEventListener('input', () => {
-//   img.style.backgroundImage = url()
-// })
-//*****************************************
-// let urlInput = document.getElementById("url-img-input");
-// let img = document.getElementById("img");
-
-// //Cargar imagen url
-// const imagenMeme = (e) => {
-//   img.style.backgroundImage = "url('" + e.target.value + "')";
-// };
-
-// urlInput.addEventListener("change", imagenMeme);
-//******************************************** */
-
-// const img = (evento) => {
-//   if (evento.target.value.length !== 0) {
-//     $('imagenMeme').style.backgroundImage = `url("${evento.value}")`
-//   }
-// }
-
-//*******ME TRAIGO LA IMAGEN*******//
-// const img = document.getElementById('img')
 
 //***************FILTROS***************//
 const pointsBrillo = document.getElementById('pointsBrillo')
@@ -333,10 +299,10 @@ inputColorFondo.addEventListener('input', (e) => {
   img.classList.toggle('transparente')
 }) 
 
-//***************ELEGIR TIPO DE FUENTE NF***************//
+//***************ELEGIR TIPO DE FUENTE***************//
 const selectEstiloFuente = document.getElementById('selectEstiloFuente') 
 
-selectEstiloFuente.addEventListener('input', (e) => {
+selectEstiloFuente.addEventListener('change', (e) => {
   renderBotText.style.fontFamily = e.target.value
   renderTopText.style.fontFamily = e.target.value
 })
@@ -379,6 +345,14 @@ alineadoDerecha.addEventListener('click', () => {
   // renderTopText.style.textAlign = 'right' //NO FUNCIONA!!!
   renderTopText.classList.add('alineadoDerecha')
 })
+
+alineadoIzquierda.addEventListener('click', () => {
+  // renderTopText.style.alignItems = 'flex-end'
+  // console.log(alineadoIzquierda)
+  // renderTopText.style.textAlign = 'right' //NO FUNCIONA!!!
+  renderTopText.classList.add('alineadoIzquierda')
+})
+
 
 //***************CONTORNO DE TEXTO***************//
 const ningunContorno = document.getElementById('ningunContorno')
