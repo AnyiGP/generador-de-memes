@@ -386,14 +386,27 @@ alineadoDerecha.addEventListener('click', () => {
   renderTopText.style.textAlign = 'right' //NO FUNCIONA!!!
 })
 
-//***************CONTORNO DE TEXTO NF***************//
+//***************CONTORNO DE TEXTO***************//
+const ningunContorno = document.getElementById('ningunContorno')
 const contornoClaro = document.getElementById('contornoClaro')
 const contornoOscuro = document.getElementById('contornoOscuro')
 
+ningunContorno.addEventListener('click', () => {
+  renderTopText.style.textShadow = 'none'
+  renderBotText.style.textShadow = 'none'
+})
+
+contornoClaro.addEventListener('click', () => {
+  renderTopText.style.textShadow = 'white 2px 2px, white -2px 2px, white 2px -2px, white -2px -2px'
+  renderBotText.style.textShadow = 'white 2px 2px, white -2px 2px, white 2px -2px, white -2px -2px'
+})
+
 contornoOscuro.addEventListener('click', () => {
-  console.log(contornoOscuro)
-  renderTopText.style.textShadow = 'black'
-  renderBotText.style.textShadow = 'white'
+  renderTopText.style.textShadow = 'black 2px 2px, black -2px 2px, black 2px -2px, black -2px -2px'
+  renderBotText.style.textShadow = 'black 2px 2px, black -2px 2px, black 2px -2px, black -2px -2px'
+  
+  // renderTopText.classList.add('contornoOscuro')
+  // renderBotText.classList.add('contornoOscuro')
 })
 
 
