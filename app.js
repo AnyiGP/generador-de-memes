@@ -386,6 +386,25 @@ alineadoDerecha.addEventListener('click', () => {
   renderTopText.style.textAlign = 'right' //NO FUNCIONA!!!
 })
 
+//***************CONTORNO DE TEXTO NF***************//
+const contornoClaro = document.getElementById('contornoClaro')
+const contornoOscuro = document.getElementById('contornoOscuro')
+
+contornoOscuro.addEventListener('click', () => {
+  console.log(contornoOscuro)
+  renderTopText.style.textShadow = 'black'
+  renderBotText.style.textShadow = 'white'
+})
+
+
+//***************ESPACIADO DE TEXTO***************//
+
+
+
+//***************INTERLINEADO DE TEXTO***************//
+
+
+
 //***************COLOR FONDO IMAGEN***************//
 
 const inputColorFondoImagen = document.getElementById('inputColorFondoImagen')
