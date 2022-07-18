@@ -171,8 +171,6 @@ urlImagenMeme.addEventListener('input', () => {
 // // const muestraImagenEnElDiv = `<div class='imagenAModificar'> ${imgQueAgregaElUsuario}</div>` 
 // const muestraImagenEnElDiv = `<div class='img'> ${urlImagenMeme}</div>` 
 //**************************************
-
-
 // const img = getElementById('img')
 // img.addEventListener('input', () => {
 //   img.style.backgroundImage = url()
@@ -234,8 +232,8 @@ pointsNegativo.addEventListener('input', filter)
 
 
 //***************BTN RESTABLECER FILTROS***************//
-const restablecer = (event) => {
-  event.preventDefault()
+const restablecer = (e) => {
+  e.preventDefault()
   img.style.filter = `brightness(1)`;
   img.style.filter = `opacity(1)`;
   img.style.filter = `contrast(100)`;
@@ -245,24 +243,20 @@ const restablecer = (event) => {
   img.style.filter = `saturate(0)`;
   img.style.filter = `saturate(100)`;
   img.style.filter = `invert(0)`;
+
+  pointsBrillo.value = 1;
+  pointsOpacidad.value = 1;
+  pointsContraste.value = 100;
+  pointsDesenfoque.value = 0;
+  pointsGrises.value = 0;
+  pointsSepia.value = 0;
+  pointsHue.value = 0;
+  pointsSaturado.value = 100;
+  pointsNegativo.value = 0;
 }
 
-const btnReestablecerFiltros = document.getElementById('btnReestablecerFiltros') 
-btnReestablecerFiltros.addEventListener('click', (event) => {restablecer(event)}) 
-
-//!!!!como hago para que las bolitas me vuelvan al valor inicial?
-pointsBrillo.value = 1;
-pointsOpacidad.value = 1;
-pointsContraste.value = 100;
-pointsDesenfoque.value = 0;
-pointsGrises.value = 0;
-pointsSepia.value = 0;
-pointsHue.value = 0;
-pointsSaturado.value = 100;
-pointsNegativo.value = 0;
-
-// })
-
+const btnRestablecerFiltros = document.getElementById('btnRestablecerFiltros') 
+btnRestablecerFiltros.addEventListener('click', (e) => {restablecer(e)}) 
 
 //***************COLOR FONDO IMAGEN***************//
 const inputColorFondoImagen = document.getElementById('inputColorFondoImagen')
@@ -429,5 +423,5 @@ interlineado.addEventListener('click', (interlineado) => {
 const descargarMeme = document.getElementById('descargarMeme')
 
 descargarMeme.addEventListener('click', () => {
-  
+
 })

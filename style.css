@@ -118,7 +118,7 @@ h3 {
     background-repeat: no-repeat;
     display: flex; */
     background: url('https://th.bing.com/th/id/R.b94d0ccddfcc4f1e55bf80217b786774?rik=zXz7MPampO9q1g&riu=http%3a%2f%2fbigwnews.com%2fwp-content%2fuploads%2f2018%2f05%2fAngry-Cat-via-India-heritate-site-and-culture-on-YouTube.jpg&ehk=JDwViCJLcEI8n70XJ82kEIwW2M%2bNJ4MB3cHIMTHsSes%3d&risl=&pid=ImgRaw&r=0');
-    background-blend-mode: screen;
+    /* background-blend-mode: screen; */
 }
 
 /*#caja-imagen{
@@ -338,14 +338,14 @@ button label {
     /* appearance: none; */
 }
 
-.btnReestablecerFiltros {
+.btnRestablecerFiltros {
     margin: 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.btnReestablecerFiltros input {
+.btnRestablecerFiltros input {
     width: auto;
     padding-left: 1rem;
     padding-right: 1rem;
