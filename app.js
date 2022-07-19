@@ -315,22 +315,6 @@ tamanioFuente.addEventListener('input', (e) => {
   renderBotText.style.fontSize = `${e.target.value}px`
 })
 
-
-// const actualizarTamanioFuente = () => {
-//   const tamanio = $('tamanioFuente').value
-
-//   $('renderBotText').style.fontSize = `${tamanio}px`
-//   $('renderTopText').style.fontSize = `${tamanio}px`
-// }
-
-
-// const imprimirTamanio = () => {
-//   renderBotText.style.fontSize = `
-//   ${tamanioFuente.value}`;
-// };
-
-// tamanioFuente.addEventListener('input', imprimirTamanio)
-
 //***************ALINEADO DE TEXTO NF***************//
 const alineadoTexto = document.getElementById('alineadoTexto')
 const alineadoDerecha = document.getElementById('alineadoDerecha')
@@ -342,7 +326,7 @@ alineadoDerecha.addEventListener('click', () => {
   // console.log(alineadoDerecha)
   // renderTopText.style.textAlign = 'right' //NO FUNCIONA!!!
   renderTopText.classList.add('alineadoDerecha')
-})
+}) // ver si lo que lo contiene tiene lugar para que se mueva a la derecha o a la izquierda
 
 alineadoIzquierda.addEventListener('click', () => {
   // renderTopText.style.alignItems = 'flex-end'
@@ -377,17 +361,17 @@ const espaciado = document.getElementById('espaciado')
 
 espaciado.addEventListener('input', (e) => {
   console.log(espaciado)
-  renderTopText.style.padding = e.target.value
-  renderBotText.style.padding = e.target.value
+  renderTopText.style.padding = `${e.target.value}px`
+  renderBotText.style.padding = `${e.target.value}px`
 })
 
 //***************INTERLINEADO DE TEXTO NF***************//
 const interlineado = document.getElementById('interlineado')
 
-interlineado.addEventListener('click', (interlineado) => {
+interlineado.addEventListener('select', (e) => {
   console.log(interlineado)
-  renderTopText.style.lineHeight = interlineado.target.value
-  renderBotText.style.lineHeight = interlineado.target.value
+  renderTopText.style.lineHeight = `${e.target.value}px`
+  renderBotText.style.lineHeight = `${e.target.value}px`
 })
 
 //***************DESCARGAR MEME***************//
