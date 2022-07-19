@@ -151,6 +151,8 @@ btnSinTextoInferior.addEventListener('input', () => {
   img.classList.toggle('contenedor')
 }) 
 
+
+
 //!!!!funciona pero me arrastra todo para arriba cuando aprieto las 2 opciones debe ser por el div de absolute
 
 //**************AGREGAR IMAGEN CON URL**************//
@@ -364,6 +366,8 @@ espaciado.addEventListener('input', (e) => {
   renderTopText.style.padding = `${e.target.value}px`
   renderBotText.style.padding = `${e.target.value}px`
 })
+
+//!!!!!!!!!!!!!!!!!!!!DEBO TENER EL MISMO ERROR DEL ALINEADO
 
 //***************INTERLINEADO DE TEXTO NF***************//
 const interlineado = document.getElementById('interlineado')
