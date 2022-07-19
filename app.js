@@ -324,19 +324,19 @@ const alineadoIzquierda = document.getElementById('alineadoIzquierda')
 const alineadoCentro = document.getElementById('alineadoCentro')
 
 alineadoDerecha.addEventListener('click', () => {
-  // renderTopText.style.alignItems = 'flex-end'
-  // console.log(alineadoDerecha)
-  // renderTopText.style.textAlign = 'right' //NO FUNCIONA!!!
-  renderTopText.classList.add('alineadoDerecha')
-}) // ver si lo que lo contiene tiene lugar para que se mueva a la derecha o a la izquierda
+  renderTopText.style.textAlign = 'right'
+  renderBotText.style.textAlign = 'right'
+}) 
 
 alineadoIzquierda.addEventListener('click', () => {
-  // renderTopText.style.alignItems = 'flex-end'
-  // console.log(alineadoIzquierda)
-  // renderTopText.style.textAlign = 'right' //NO FUNCIONA!!!
-  renderTopText.classList.add('alineadoIzquierda')
+  renderTopText.style.textAlign = 'left'
+  renderBotText.style.textAlign = 'left'
 })
 
+alineadoCentro.addEventListener('click', () => {
+  renderTopText.style.textAlign = 'center'
+  renderBotText.style.textAlign = 'center'
+})
 
 //***************CONTORNO DE TEXTO***************//
 const ningunContorno = document.getElementById('ningunContorno')
