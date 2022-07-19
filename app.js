@@ -1,36 +1,4 @@
-
-// const unicoElemento = document.querySelector('#parrafoId2')
-
-// unicoElemento.classList.add('aniadida') // la clase aniadida est'a creada en el css pero no en el html, con classList.add('anidida') que en el css tiene un color de letra azul y un tama;o diferente a los dem'as, le pone ese estilo al #parrafoId2
-
-// //ANIADIR UNA CLASE Y QUITAR OTRA COMO QUE SE MUESTRE TEXTO CUANDO APRIETO BOTON TEXTO Y SE OCULTE IMAGEN, eso lo hago con .remove saco la clase TEXTO y que se vea la otra la de IMAGEN que es igual pero tiene los atributos para modificar de la imagen
-
-
-// console.log(unicoElemento)
-
-// const quitarClase = document.querySelector('#parrafoId')
-// quitarClase.classList.remove('otra') // con .remove saca la clase; con .replace la reemplaza; con .toggle si tiene la clase se la quita y si no la tiene se la agrega => con .toggle QUE SE MUESTRE OSCURO CUANDO ARIETO OSCURO Y CUANDO LO VUELVA A APRETAR SE VEA CLARO.
-
-// console.log(quitarClase)
-
-
-// //ANIDIR UNA IMAGEN MEDIANTE UNA URL QUE INGRESE EL USUARIO. //agregar imagen, a un DIV vacio del HTML. CREAMOS ELEMENTO DEL HTML, con .createElement('etiquetaDeHtml')
-
-// const img = document.createElement('img')
-// img.setAttribute('src', 'url') //'src' es el atributo y la 'url' el valor. 'src' es el atributo que le voy a poner a la variable 'img' 
-// img.setAttribute('alt')
-
-
-// //otra menera seria crear una etiqueta mediante un template string
-// const imgQueAgregaElUsuario = //que el usuario ingrese la url en el imput
-// const muestraImagenEnElDiv = `<div class='imagenAModificar'> ${imgQueAgregaElUsuario}</div>` 
-
-
-// //disparar una accion un EVENTO (click) cuando el usuario haga click mediante el HANDLER que es el controlador
-
-// prueba4Boton.addEventListener('click', funcionNombre)
-
-//////////elegir entre texto e imagen//////////
+//************ELEGIR ENTRE TEXTO E IMAGEN************/
 
 const texto = document.getElementById('texto')
 const imagen = document.getElementById('imagen')
@@ -48,14 +16,14 @@ btnTxt.addEventListener('click', () => {
   texto.style.display = 'block'
 })
 
-//********BTN CERRAR TEXTO************/
+//************BTN CERRAR TEXTO************/
  const btnCerrarTexto = document.getElementById('btnCerrarTexto')
  
  btnCerrarTexto.addEventListener('click', (e) => {
     texto.style.display = 'none'
 })
 
-//********BTN CERRAR IMAGEN************/
+//************BTN CERRAR IMAGEN************/
 const btnCerrarImagen = document.getElementById('btnCerrarImagen')
  
 btnCerrarImagen.addEventListener('click', (e) => {
@@ -64,7 +32,7 @@ btnCerrarImagen.addEventListener('click', (e) => {
 
 //**************BOTON CLARO OSCURO***********/
 document.addEventListener('DOMContentLoaded', function() {
-  var elems = document.querySelectorAll('select');
+  var elems = document.querySelector('select');
   var instances = M.FormSelect.init(elems);
 })
 
@@ -317,7 +285,7 @@ tamanioFuente.addEventListener('input', (e) => {
   renderBotText.style.fontSize = `${e.target.value}px`
 })
 
-//***************ALINEADO DE TEXTO NF***************//
+//***************ALINEADO DE TEXTO***************//
 const alineadoTexto = document.getElementById('alineadoTexto')
 const alineadoDerecha = document.getElementById('alineadoDerecha')
 const alineadoIzquierda = document.getElementById('alineadoIzquierda')
@@ -358,7 +326,7 @@ contornoOscuro.addEventListener('click', () => {
   renderBotText.style.textShadow = 'black 2px 2px, black -2px 2px, black 2px -2px, black -2px -2px'
 })
 
-//***************ESPACIADO DE TEXTO NF***************//
+//***************ESPACIADO DE TEXTO***************//
 const espaciado = document.getElementById('espaciado')
 
 espaciado.addEventListener('input', (e) => {
@@ -367,15 +335,13 @@ espaciado.addEventListener('input', (e) => {
   renderBotText.style.padding = `${e.target.value}px`
 })
 
-//!!!!!!!!!!!!!!!!!!!!DEBO TENER EL MISMO ERROR DEL ALINEADO
-
 //***************INTERLINEADO DE TEXTO NF***************//
 const interlineado = document.getElementById('interlineado')
 
 interlineado.addEventListener('select', (e) => {
   console.log(interlineado)
-  renderTopText.style.lineHeight = `${e.target.value}px`
-  renderBotText.style.lineHeight = `${e.target.value}px`
+  renderTopText.style.lineHeight = e.target.value
+  renderBotText.style.lineHeight = e.target.value
 })
 
 //***************DESCARGAR MEME***************//

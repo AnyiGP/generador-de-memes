@@ -1,192 +1,166 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Open Sans';
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans";
 }
 
 .contenedorBody {
-    background-color: #c6c6c6;
+  background-color: #c6c6c6;
 }
 
 h1 {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 h2 {
-    padding: 2rem 0rem 0.5rem 0rem;
-    margin-bottom: 0.2rem;
-    font-size: 2rem;
-    font-weight: 600;
-    color: #2f3332;
-    text-align: center;
+  padding: 2rem 0rem 0.5rem 0rem;
+  margin-bottom: 0.2rem;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #2f3332;
+  text-align: center;
 }
 
 h3 {
-    padding: 1rem 0rem 0.5rem 0rem;
-    color: #2f3332;
-    font-size: medium;
-    font-weight: 600;
+  padding: 1rem 0rem 0.5rem 0rem;
+  color: #2f3332;
+  font-size: medium;
+  font-weight: 600;
 }
 
 .encabezado {
-    /* width: auto;
+  /* width: auto;
     height: 15vh;
     padding-top: 2rem; */
-    width: 100%;
-    position: absolute;
-    color: #2f3332;
-    background-color: whitesmoke;
-    text-align: center;    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: -10px 10px 100px 5px rgb(0 0 0 / 30%);
+  width: 100%;
+  position: absolute;
+  color: #2f3332;
+  background-color: whitesmoke;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: -10px 10px 100px 5px rgb(0 0 0 / 30%);
 }
 
 /**************************************************************/
 
 .botonesDelHeader button {
-    /* width: 10%;
+  /* width: 10%;
     height: auto;  */
-    padding: 1rem;
-    color: #a5a29b;
-    background-color: transparent;
-    border-style: none;
+  padding: 1rem;
+  color: #a5a29b;
+  background-color: transparent;
+  border-style: none;
 }
 
 main {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-} 
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 .contenedorVistaMeme {
-    margin-top: 10%;
+  margin-top: 10%;
 }
 
 .vistaMeme {
-    /* position: absolute;
+  /* position: absolute;
     top: 13vw;
     left: 30vw; */
-    width: 30vw;
-    height: 30vw;
-    background-color: #a5a29b;
-    color: #2f3332;
-    text-align: center;
+  width: 30vw;
+  height: 30vw;
+  background-color: #a5a29b;
+  color: #2f3332;
+  text-align: center;
 }
 
-.txtSuperior , 
+.txtSuperior,
 .txtInferior {
-    height: 15%;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 2rem;
-    background-color: aliceblue;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 0;
+  width: 100%;
+  height: 15%;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 2rem;
+  background-color: aliceblue;
+  margin-bottom: 0;
 }
 
 .sinTxtSuperior {
-    display: none;
+  display: none;
 }
 
 .sinTxtInferior {
-    display: none;
+  display: none;
 }
 
 .contenedor {
-    height: 85% !important;
+  height: 85% !important;
 }
 
 .contenedorTotal {
-    height: 100%;
-    position: relative;   
-}
-
-.contenedorImagenMeme {
-    /* height: 70%; */
-    background-color: red;
+  height: 100%;
+  position: relative;
 }
 
 .transparente {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 #img {
-    height: 70%;
-    background-size: 100%;
-    background-position: center;
-    /* background-repeat: no-repeat; */
-    /* display: flex; */
-    background-blend-mode: screen;
+  height: 70%;
+  background-size: 100%;
+  background-position: center;
+  /* background-repeat: no-repeat; */
+  /* display: flex; */
+  background-blend-mode: screen;
 }
 
-/*#caja-imagen{
-    width: 100%;
-    flex-grow: 1;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-}
-*/
-
-
-.inputColor::-webkit-color-swatch { 
-    appearance: none;
-    border-radius: 50%;
-    background-color: transparent;
-    border: none;
+.inputColor::-webkit-color-swatch {
+  appearance: none;
+  border-radius: 50%;
+  background-color: transparent;
+  border: none;
 }
 
 .descargaMeme {
-    border-style: none;
-    width: 50%;
-    margin: 1rem;
-    padding: 0.5rem;
-    color: #2f3332;
-    background-color: #6bd8fa;
-    margin-left: 25%;
-    /* position: absolute;
-    bottom: 1rem;
-    margin-top: 35vh; */
-    /* text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center; */
+  border-style: none;
+  width: 50%;
+  margin: 1rem;
+  padding: 0.5rem;
+  color: #2f3332;
+  background-color: #6bd8fa;
+  margin-left: 25%;
 }
 
 .barraLateral a {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    width: 2rem;
-    text-align: center;
-    padding: 0rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 2rem;
+  text-align: center;
+  padding: 0rem;
 }
 
 .controlImagen,
 .controlTexto {
-    width: 24vw;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    background-color: #6bd8fa;
-    color: #2f3332;
-    padding: 0vw 2vw;
-    overflow: auto;
-    position: fixed;
-    top: 0;
-    right: 0;
-    box-shadow: -10px 10px 100px 5px rgb(0 0 0 / 30%);
-    z-index: 10;
-    
-    
-    /* overflow: scroll;
+  width: 24vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #6bd8fa;
+  color: #2f3332;
+  padding: 0vw 2vw;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  right: 0;
+  box-shadow: -10px 10px 100px 5px rgb(0 0 0 / 30%);
+  z-index: 10;
+
+  /* overflow: scroll;
     width: 20vw;
     height: 100vh;
     background-color: #6bd8fa;
@@ -196,88 +170,87 @@ main {
 }
 
 .botonCerrar {
-    width: 1em;
-    height: 1rem;
-    position: absolute;
-    right: 3rem;
-    top: 1rem;
+  width: 1em;
+  height: 1rem;
+  position: absolute;
+  right: 3rem;
+  top: 1rem;
 }
 
 .urlImagen input {
-    width: 100%;
-    padding: 0.2rem;
-    background-color: #676767;
-    border-style: none;
+  width: 100%;
+  padding: 0.2rem;
+  background-color: #676767;
+  border-style: none;
 }
 
 .fondo {
-    display: block;
+  display: block;
 }
 
 .colorDeFuenteYFondo {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin-left: -0.5rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: -0.5rem;
 }
 
 .colorDeFondoImagen {
-    width: 50%;
-    height: 2rem;
-    margin-right: 1rem;
-    padding-right: 2rem;
-    background-color: #c6c6c6;
-    display: flex;
-    text-align: center;
-    border-radius: 0.2rem;
+  width: 50%;
+  height: 2rem;
+  margin-right: 1rem;
+  padding-right: 2rem;
+  background-color: #c6c6c6;
+  display: flex;
+  text-align: center;
+  border-radius: 0.2rem;
 }
 
 .colorDeFondoImagen span {
-    display: flex;
-    text-align: center;
-    align-items: center;
-    color: #2f3332;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  color: #2f3332;
 }
 
-
 .colorDeFondo {
-    width: 90%;
-    height: 2rem;
-    margin-right: 2rem;
-    background-color: #c6c6c6;
-    display: flex;
-    text-align: center;
-    border-radius: 0.2rem;
+  width: 90%;
+  height: 2rem;
+  margin-right: 2rem;
+  background-color: #c6c6c6;
+  display: flex;
+  text-align: center;
+  border-radius: 0.2rem;
 }
 
 /*#fafafa*/
 .colorDeFondo span {
-    display: flex;
-    text-align: center;
-    align-items: center;
-    color: #2f3332;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  color: #2f3332;
 }
 
 .colorDeFuente {
-    width: 90%;
-    height: 2rem;
-    margin-right: 1rem;
-    margin-left: 0.5rem;
-    background-color: #c6c6c6;
-    display: flex;
-    text-align: center;
-    border-radius: 0.2rem;
+  width: 90%;
+  height: 2rem;
+  margin-right: 1rem;
+  margin-left: 0.5rem;
+  background-color: #c6c6c6;
+  display: flex;
+  text-align: center;
+  border-radius: 0.2rem;
 }
 
 /*#fafafa*/
 .colorDeFuente span {
-    display: flex;
-    text-align: center;
-    align-items: center;
-    color: #2f3332;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  color: #2f3332;
 }
 
-  /**cambia la pelotita del input*/
+/**cambia la pelotita del input*/
 /* input[type='range']::-webkit-slider-thumb {
     -webkit-appearance: none;
     height: 16px;
@@ -287,29 +260,29 @@ main {
     cursor: pointer;
   } */
 
-  /*estila los check box*/
+/*estila los check box*/
 /* input[type='checkbox'] {
     margin: 0 5px 0 0;
   } */
 
-  /*cambia la pelotita para elegir color*/
+/*cambia la pelotita para elegir color*/
 input[type="color"]::-webkit-color-swatch {
-        height: 1.2rem;
-        min-width: 18px;
-        border-radius: 50%;
-        border: 0;
-        margin: 0;
-        padding: 0;
-        cursor: pointer;
-        margin-right: 10px;
+  height: 1.2rem;
+  min-width: 18px;
+  border-radius: 50%;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  margin-right: 10px;
 }
 
 .fondo input {
-    width: 40%;
-    background-color: #c6c6c6;
-    border-style: none;
-    padding: 0.2rem;
-    margin-right: 10%;
+  width: 40%;
+  background-color: #c6c6c6;
+  border-style: none;
+  padding: 0.2rem;
+  margin-right: 10%;
 }
 /* 
 .fondo select {
@@ -323,251 +296,238 @@ input[type="color"]::-webkit-color-swatch {
 } */
 
 .filtros div {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .filtros label {
-    color: #676767;
-    font-weight: 500;
-    font-size: 1rem;
-    text-transform: uppercase;
+  color: #676767;
+  font-weight: 500;
+  font-size: 1rem;
+  text-transform: uppercase;
 }
 
 button label {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
-
 .filtros input {
-    width: 100%;
-    height: 0.5rem;
-    margin: 0.5rem 0rem 1rem 0rem;
-    background-color: #c6c6c6;
-    border-style: #2f3332;
-    border-radius: 1rem;
-    /* appearance: none; */
+  width: 100%;
+  height: 0.5rem;
+  margin: 0.5rem 0rem 1rem 0rem;
+  background-color: #c6c6c6;
+  border-style: #2f3332;
+  border-radius: 1rem;
+  /* appearance: none; */
 }
 
 .btnRestablecerFiltros {
-    margin: 3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  margin: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .btnRestablecerFiltros input {
-    width: auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    height: 2rem;
-    border-style: none;
-    background-color: #00bef8;
-    font-size: 1rem;
-    font-weight: 500;
-    color: #2f3332;
-    border-radius: 0.2rem;
+  width: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  height: 2rem;
+  border-style: none;
+  background-color: #00bef8;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #2f3332;
+  border-radius: 0.2rem;
 }
 
 .alineadoTexto i {
-    width: 1rem;
-    height: 1rem;
+  width: 1rem;
+  height: 1rem;
 }
 
 .alineadoDerecha {
-    text-align: right;
+  text-align: right;
 }
 
-.textoSuperior ,
+.textoSuperior,
 .textoInferior {
-    width: 100%;
-    background-color: transparent;
-    border-style: none;
-    border-bottom: #2f3332 solid 2px;
-    padding-bottom: 1rem;
+  width: 100%;
+  background-color: transparent;
+  border-style: none;
+  border-bottom: #2f3332 solid 2px;
+  padding-bottom: 1rem;
 }
 
-.sinTextoSuperior ,
-.sinTextoInferior ,
+.sinTextoSuperior,
+.sinTextoInferior,
 .fondoTransparente {
-    margin: 1rem 0rem 0rem 0rem;
-    color: #2f3332;
-    font-size: small;
+  margin: 1rem 0rem 0rem 0rem;
+  color: #2f3332;
+  font-size: small;
 }
 
 .estiloFuente select {
-    width: 100%;
-    border-style: none;
-    background-color: transparent;
-    border-bottom: solid #2f3332 0.15rem;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
-    color: red;
-
+  width: 100%;
+  border-style: none;
+  background-color: transparent;
+  border-bottom: solid #2f3332 0.15rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 .sizeAlineado {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    width: 100%;
-    display: flex;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  display: flex;
 }
 
 .alineadoTexto {
-    display: flex;
+  display: flex;
 }
 
-.alineadoTexto button{
-    width: 2rem;
-    background-color: transparent;
-    margin: 0.5rem;
-    border-style: none;
+.alineadoTexto button {
+  width: 2rem;
+  background-color: transparent;
+  margin: 0.5rem;
+  border-style: none;
 }
 
 .size input {
-    border-style: none;
-    background-color: transparent;
-    border-bottom: #2f3332 solid 0.15rem;
-    margin-right: 2rem;
+  border-style: none;
+  background-color: transparent;
+  border-bottom: #2f3332 solid 0.15rem;
+  margin-right: 2rem;
 }
 
-.contornoFuente button{
-    border-style: none;
-    background-color: #c6c6c6;
-    width: 30%;
-    height: 2rem;
+.contornoFuente button {
+  border-style: none;
+  background-color: #c6c6c6;
+  width: 30%;
+  height: 2rem;
 }
 
 .interlineado {
-    margin-bottom: 1rem;
-    
+  margin-bottom: 1rem;
 }
 
-.interlineado select, .espaciado input {
-    width: 100%;
-    background-color: transparent;
-    border-style: none;
-    border-bottom: #2f3332 solid 0.15rem;
-    color: #2f3332;
+.interlineado select,
+.espaciado input {
+  width: 100%;
+  background-color: transparent;
+  border-style: none;
+  border-bottom: #2f3332 solid 0.15rem;
+  color: #2f3332;
 }
-
-/* 
-.controlTexto {
-    display: none;
-} */
 
 .modo-oscuro {
-    background-color: #2f3332;
-    color: #c6c6c6;
+  background-color: #2f3332;
+  color: #c6c6c6;
 }
 
 .modo-oscuro2 {
-    background-color: #676767;
-    color: #c6c6c6;
+  background-color: #676767;
+  color: #c6c6c6;
 }
 
 .modo-oscuro3 {
-    background-color: #007cc2;
-    color: #c6c6c6;
- 
+  background-color: #007cc2;
+  color: #c6c6c6;
 }
 
 .modo-oscuro4 {
-    color: #c6c6c6 !important;
+  color: #c6c6c6 !important;
 }
 
 .btnCerrarMio {
-    display: none;
+  display: none;
 }
-
-
 
 /*RESPONSIVE - BREACKPOINT 1*/
 
 @media screen and (max-width: 480px) {
-    .contenedorBody {
-        width: 100%;
-    }
+  .contenedorBody {
+    width: 100%;
+  }
 
-    .encabezado {
-        width: 100%;
-    }
+  .encabezado {
+    width: 100%;
+  }
 
-    .vistaMeme {
-        width: 80vw;
-        height: 80vw;
-        margin-top: 30%;
-        /* position: absolute;
+  .vistaMeme {
+    width: 80vw;
+    height: 80vw;
+    margin-top: 30%;
+    /* position: absolute;
         left: 10vw;
         margin-top: 35vh; */
-        display: block;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .controlImagen,
-    .controlTexto {
-        display: none;
-        width: 100vw;
-        height: 100%;
-    /* position: relative; */
-    }
+    display: block;
+    justify-content: center;
+    align-items: center;
+  }
 
-    .btnCerrarMio {
-        display: block;
-    }
+  .controlImagen,
+  .controlTexto {
+    display: none;
+    width: 100vw;
+    height: 100%;
+    /* position: relative; */
+  }
+
+  .btnCerrarMio {
+    display: block;
+  }
 }
 
 /*RESPONSIVE - BREACKPOINT 2*/
 
 @media screen and (min-width: 481px) and (max-width: 677px) {
-    .contenedorBody {
-        width: 100%;
-    }
+  .contenedorBody {
+    width: 100%;
+  }
 
-    .encabezado {
-        width: 100%;
-    }
+  .encabezado {
+    width: 100%;
+  }
 
-    .vistaMeme {
-        width: 80vw;
-        height: 80vw;
-        margin-top: 30%;
-        /* position: absolute;
+  .vistaMeme {
+    width: 80vw;
+    height: 80vw;
+    margin-top: 30%;
+    /* position: absolute;
         left: 10vw;
         margin-top: 20vh; */
-        display: block;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .controlImagen,
-    .controlTexto {
-        display: none;
-        width: 100vw;
-        height: 100%;
-    /* position: relative; */
-    }
+    display: block;
+    justify-content: center;
+    align-items: center;
+  }
 
-    .btnCerrarMio {
-        display: block;
-    }
+  .controlImagen,
+  .controlTexto {
+    display: none;
+    width: 100vw;
+    height: 100%;
+    /* position: relative; */
+  }
+
+  .btnCerrarMio {
+    display: block;
+  }
 }
 
 /*RESPONSIVE - BREACKPOINT 3*/
 
 @media screen and (min-width: 678px) and (max-width: 1220px) {
-    .vistaMeme {
-        width: 40vw;
-        height: 40vw;
-        margin-top: 20%;
-        /* position: absolute;
+  .vistaMeme {
+    width: 40vw;
+    height: 40vw;
+    margin-top: 20%;
+    /* position: absolute;
         left: 25vw;
         margin-top: 10vh; */
-        display: block;
-        justify-content: center;
-        align-items: center;
-        
-    }
-    
+    display: block;
+    justify-content: center;
+    align-items: center;
+  }
 }

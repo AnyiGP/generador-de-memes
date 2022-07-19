@@ -1,127 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&amp;display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&amp;display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&amp;display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>GeneradorDeMemes</title>
 </head>
+
 <body id='contenedorBody' class="contenedorBody">
     <div class="encabezado" id="encabezado">
-    <header>
-        <h1>Generador de Memes</h1>
-        <div class="botonesDelHeader">
-            <button id="btnImg">
-                <i class="fa-solid fa-image" aria=""></i>
-                Imagen
-            </button>
-            <button id="btnTxt">
-                <i class="fa-solid fa-font"></i>
-                Texto
-            </button>
-            <!-- <button id="btnModoOscuro" ><i class="fa-solid fa-circle-half-stroke"></i>
-                Modo Oscuro
-            </button> -->
-            <button id="btnModoOscuro" class="switch">
-                <label>
-                Claro
-                <input type="checkbox">
-                <span class="lever"></span>
-                Oscuro
-                </label>
-            </button>
-        </div>
-    </header>
+        <header>
+            <h1>Generador de Memes</h1>
+            <div class="botonesDelHeader">
+                <button id="btnImg">
+                    <i class="fa-solid fa-image" aria=""></i>
+                    Imagen
+                </button>
+                <button id="btnTxt">
+                    <i class="fa-solid fa-font"></i>
+                    Texto
+                </button>
+                <button id="btnModoOscuro" class="switch">
+                    <label>
+                        <input type="checkbox">
+                        <span class="lever"></span>Claro/Oscuro
+                    </label>
+                </button>
+            </div>
+        </header>
     </div>
     <main>
         <div class="contenedorVistaMeme">
-          <div class="vistaMeme" id="vistaMeme">
-            <p id="renderTopText" class="txtSuperior"
-            >TOP TEXT</p>
-            <div class="contenedorImagenMeme" id="img" aria-label="Imagen"> <!--ACA TIENE QUE APARECER LA IMAGEN-->
+            <div class="vistaMeme" id="vistaMeme">
+                <p id="renderTopText" class="txtSuperior">TOP TEXT</p>
+                <div class="contenedorImagenMeme" id="img" aria-label="Imagen">
+                    <!--ACA TIENE QUE APARECER LA IMAGEN-->
+                </div>
+                <p id="renderBotText" class="txtInferior">BOTTOM TEXT</p>
             </div>
-            <p id="renderBotText" class="txtInferior">BOTTOM TEXT</p>
-          </div>
-          <button class="descargaMeme" id="btnDescargarMeme">
-            <i class="fa-solid fa-download"></i>
-            Descargar Meme
-          </button>
-        </div>  
+            <button class="descargaMeme" id="btnDescargarMeme">
+                <i class="fa-solid fa-download"></i>
+                Descargar Meme
+            </button>
+        </div>
     </main>
 
-            <!--#####################################################-->
-            
-            
+    <!--#####################################################-->
+
+
     <aside id="barraLateral" class="barraLateral">
-            
-            <!--################## TEXTO ###################################-->
-        
-            <section id="texto" class="controlTexto">
-                <a class="waves-effect waves-light btn-small #40c4ff light-blue accent-2 btnCerrarMio" id="btnCerrarTexto">x</a>
-                <h2>TEXTO</h2>
-                <h3>SUPERIOR</h3>
-                <div id="textoSuperior">
-                    <input type="text" value="TOP TEXT" id="TopTextInput" class="textoSuperior">
-                </div>
-                <p class="sinTextoSuperior" id="btnSinTextoSuperior">
-                    <label>
-                      <input type="checkbox" class="filled-in"/>
-                      <span>Sin Texto Superior</span>
-                    </label>
-                </p>
-    
-            
-                <!--################TExtoINgferior################################-->
-            
-                <h3>INFERIOR</h3>
-                <div id="textoInferior">
-                    <input type="text" value="TOP TEXT" id="BotTextInput" class="textoInferior">
-                </div>
-    
-                    
-                <!--             
-                    <textarea type="text" class="textoInferior">Bottom Text</textarea> -->
-    
-                <!-- <div class="sinTextoInferior">
-                    <input type="checkbox" name="sinTextoInferior" id="">
-                    <label for="sinTextoInferior">Sin Texto Inferior</label>
-                </div> -->
-    
-                  <p class="sinTextoInferior" id="btnSinTextoInferior">
-                    <label >
-                      <input type="checkbox" class="filled-in"/>
-                      <span>Sin Texto Inferior</span>
-                    </label>
-                  </p>
-    
-                <!--#################fuente######################-->
-            
-                <h3>FUENTE</h3>
-                <div class="estiloFuente input-field col s12">
-                    <select id="selectEstiloFuente">
-                      <option value="" disabled selected>Estilo Fuente</option>
-                      <option value="Arial">Arial</option>
-                      <option value="Arial Black">Arial Black</option>
-                      <option value="American Typewriter">American Typewriter</option>
-                      <option value="Andale Mono">Andale Mono</option>
-                      <option value="Comic Sans MS">Comic Sans MS</option>
-                      <option value="Hevetica">Hevetica</option>
-                      <option value="Impact">Impact</option>
-                      <option value="Verdana">Verdana</option>
-                      <option value="Times New Roman">Times New Roman</option>
-                    </select>
-                    <label></label>
-                </div>
-    
-                <div class="sizeAlineado">  
+
+        <!--################## TEXTO ###################################-->
+
+        <section id="texto" class="controlTexto">
+            <a class="waves-effect waves-light btn-small #40c4ff light-blue accent-2 btnCerrarMio"
+                id="btnCerrarTexto">x</a>
+            <h2>TEXTO</h2>
+            <h3>SUPERIOR</h3>
+            <div id="textoSuperior">
+                <input type="text" value="TOP TEXT" id="TopTextInput" class="textoSuperior">
+            </div>
+            <p class="sinTextoSuperior" id="btnSinTextoSuperior">
+                <label>
+                    <input type="checkbox" class="filled-in" />
+                    <span>Sin Texto Superior</span>
+                </label>
+            </p>
+
+            <!--################TExtoINgferior################################-->
+
+            <h3>INFERIOR</h3>
+            <div id="textoInferior">
+                <input type="text" value="TOP TEXT" id="BotTextInput" class="textoInferior">
+            </div>
+            <p class="sinTextoInferior" id="btnSinTextoInferior">
+                <label>
+                    <input type="checkbox" class="filled-in" />
+                    <span>Sin Texto Inferior</span>
+                </label>
+            </p>
+
+            <!--#################fuente######################-->
+
+            <h3>FUENTE</h3>
+            <div class="estiloFuente input-field col s12">
+                <select id="selectEstiloFuente">
+                    <option value="" disabled selected>Estilo Fuente</option>
+                    <option value="Arial">Arial</option>
+                    <option value="Arial Black">Arial Black</option>
+                    <option value="American Typewriter">American Typewriter</option>
+                    <option value="Andale Mono">Andale Mono</option>
+                    <option value="Comic Sans MS">Comic Sans MS</option>
+                    <option value="Hevetica">Hevetica</option>
+                    <option value="Impact">Impact</option>
+                    <option value="Verdana">Verdana</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                </select>
+                <label></label>
+            </div>
+
+            <div class="sizeAlineado">
                 <div class="size">
                     <input id="tamanioFuente" type="number" value='40' placeholder="24" min="12">
                 </div>
@@ -136,66 +130,69 @@
                         <i class="fa-solid fa-align-center"></i>
                     </button>
                 </div>
-                </div>
-                
-                <div class="colorFuente">
-                    <h3>COLOR FUENTE</h3>
-                  <div class="colorDeFuenteYFondo">
+            </div>
+
+            <div class="colorFuente">
+                <h3>COLOR FUENTE</h3>
+                <div class="colorDeFuenteYFondo">
                     <div class="fondo">
                         <div class="colorDeFuente">
                             <div>
-                            <input class="inputColor" type="color" name="Color de Fuente" id="inputColorFuente" value="#fafafa" aria-label="Color de Fuente imagen">
+                                <input class="inputColor" type="color" name="Color de Fuente" id="inputColorFuente"
+                                    value="#00000" aria-label="Color de Fuente imagen">
                             </div>
-                            <span id="imprimirColor">#fafafa</span>
+                            <span id="imprimirColor">#000000</span>
                         </div>
                     </div>
                     <div class="fondo">
                         <div class="colorDeFondo">
                             <div>
-                            <input class="inputColor" type="color" name="Color de Fondo" id="inputColorFondo" value="#fafafa" aria-label="Color de fondo imagen">
+                                <input class="inputColor" type="color" name="Color de Fondo" id="inputColorFondo"
+                                    value="#fafafa" aria-label="Color de fondo imagen">
                             </div>
                             <span id="imprimirColor">#fafafa</span>
                         </div>
                     </div>
-                  </div>
                 </div>
+            </div>
 
-                <p class="fondoTransparente">
-                    <label>
-                      <input type="checkbox" class="filled-in" id='fondoTransparente' name="fondoTransparente"/>
-                      <span>Fondo Transparente</span>
-                    </label>
-                </p>
-    
-                <div class="contornoFuente">
-                    <h3>CONTORNO</h3>
-                    <button id="ningunContorno">Ninguno</button>
-                    <button id="contornoClaro">Claro</button>
-                    <button id="contornoOscuro">Oscuro</button>
-                </div>
-    
-                <div class="espaciado">
-                    <h3>ESPACIADO</h3>
-                    <input type="number" name="espaciado" id="espaciado" placeholder="10">
-                </div>
-            
-                <div class="interlineado">
-                    <h3>INTERLINEADO</h3>
-                    <select name="opcionesInterlineado" id="interlineado">
-                        <option value="0.8">0.8</option>
-                        <option value="1">1</option>
-                        <option value="1.2">1.2</option>
-                        <option value="1.5">1.5</option>
-                        <option value="2">2</option>
-                        <option value="2.5">2.5</option>
-                    </select>
-                </div>
-            </section>
-        
-    <!--***************imagen******************-->
-        
+            <p class="fondoTransparente">
+                <label>
+                    <input type="checkbox" class="filled-in" id='fondoTransparente' name="fondoTransparente" />
+                    <span>Fondo Transparente</span>
+                </label>
+            </p>
+
+            <div class="contornoFuente">
+                <h3>CONTORNO</h3>
+                <button id="ningunContorno">Ninguno</button>
+                <button id="contornoClaro">Claro</button>
+                <button id="contornoOscuro">Oscuro</button>
+            </div>
+
+            <div class="espaciado">
+                <h3>ESPACIADO</h3>
+                <input type="number" name="espaciado" id="espaciado" placeholder="10">
+            </div>
+
+            <div class="interlineado">
+                <h3>INTERLINEADO</h3>
+                <select name="opcionesInterlineado" id="interlineado">
+                    <option value="0.8">0.8</option>
+                    <option value="1">1</option>
+                    <option value="1.2">1.2</option>
+                    <option value="1.5">1.5</option>
+                    <option value="2">2</option>
+                    <option value="2.5">2.5</option>
+                </select>
+            </div>
+        </section>
+
+        <!--***************imagen******************-->
+
         <section id="imagen" class="controlImagen">
-            <a class="waves-effect waves-light btn-small #40c4ff light-blue accent-2 btnCerrarMio" id="btnCerrarImagen">x</a>
+            <a class="waves-effect waves-light btn-small #40c4ff light-blue accent-2 btnCerrarMio"
+                id="btnCerrarImagen">x</a>
             <h2>IMAGEN</h2>
             <div class="urlImagen">
                 <h3>URL</h3>
@@ -207,78 +204,87 @@
             <div class="fondo">
                 <div class="colorDeFondoImagen">
                     <div>
-                    <input class="inputColor" type="color" name="Color de Fondo" id="inputColorFondoImagen" value="#fafafa" aria-label="Color de fondo imagen">
+                        <input class="inputColor" type="color" name="Color de Fondo" id="inputColorFondoImagen"
+                            value="#fafafa" aria-label="Color de fondo imagen">
                     </div>
                     <span id="imprimirColor">#fafafa</span>
                 </div>
-<!--
+                <!--
 
 y despues hay un pseudo-elemento ::-webkit-color-swatch-->
 
                 <div class="input-field col s12">
-                <select name="Mezclador" id="mezclador">
-                    <option value="Mezclador" disbled>Mezclador</option>
-                    <option value="unset">Ninguno</option>
-                    <option value="lighten">Aclarar</option>
-                    <option value="darken">Oscurecer</option>
-                    <option value="difference">Diferencia</option>
-                    <option value="luminosity">Luminosidad</option>
-                    <option value="multiply">Multiplicar</option>
-                </select>
+                    <select name="Mezclador" id="mezclador">
+                        <option value="Mezclador" disbled>Mezclador</option>
+                        <option value="unset">Ninguno</option>
+                        <option value="lighten">Aclarar</option>
+                        <option value="darken">Oscurecer</option>
+                        <option value="difference">Diferencia</option>
+                        <option value="luminosity">Luminosidad</option>
+                        <option value="multiply">Multiplicar</option>
+                    </select>
                 </div>
             </div>
             <div id="filtros" class="filtros">
                 <h3>FILTROS</h3>
                 <div>
-                    <label for="pointsBrillo" id="brilloW">Brillo</label>    
+                    <label for="pointsBrillo" id="brilloW">Brillo</label>
                     <input type="range" name="pointsBrillo" id="pointsBrillo" min="0" max="1" step="0.1" value="1">
                 </div>
-                  <div>
+                <div>
                     <label for="pointsOpacidad" id="opacidadW">Opacidad:</label>
                     <input type="range" id="pointsOpacidad" name="pointsOpacidad" min="0" max="1" step="0.1" value="1">
-                  </div>
-                  <div>
+                </div>
+                <div>
                     <label for="pointsContraste" id="contrasteW">Contraste:</label>
-                    <input type="range" id="pointsContraste" name="pointsContraste" min="100" max="1000" step="1" value="100">
-                  </div>
-                  <div>
+                    <input type="range" id="pointsContraste" name="pointsContraste" min="100" max="1000" step="1"
+                        value="100">
+                </div>
+                <div>
                     <label for="pointsDesenfoque" id="desenfoqueW">Desenfoque:</label>
-                    <input type="range" id="pointsDesenfoque" name="pointsDesenfoque" min="0" max="10" step="0.1" value="0">
-                  </div>
-                  <div>
+                    <input type="range" id="pointsDesenfoque" name="pointsDesenfoque" min="0" max="10" step="0.1"
+                        value="0">
+                </div>
+                <div>
                     <label for="pointsGrises" id="grisesW">Grises:</label>
                     <input type="range" id="pointsGrises" name="pointsGrises" min="0" max="100" step="1" value="0">
-                  </div>
-                  <div>
+                </div>
+                <div>
                     <label for="pointsSepia" id="sepiaW">Sepia:</label>
                     <input type="range" id="pointsSepia" name="pointsSepia" min="0" max="100" step="1" value="0">
-                  </div>
-                  <div>
+                </div>
+                <div>
                     <label for="pointsHue" id="hueW">Hue:</label>
                     <input type="range" id="pointsHue" name="pointsHue" min="0" max="359" step="1" value="0">
-                  </div>
-                  <div>
+                </div>
+                <div>
                     <label for="pointsSaturado" id="saturadoW">Saturado:</label>
-                    <input type="range" id="pointsSaturado" name="pointsSaturado" min="100" max="1000" step="10" value="100">
-                  </div>
-                  <div>
+                    <input type="range" id="pointsSaturado" name="pointsSaturado" min="100" max="1000" step="10"
+                        value="100">
+                </div>
+                <div>
                     <label for="pointsNegativo" id="negativoW">Negativo:</label>
                     <input type="range" id="pointsNegativo" name="pointsNegativo" min="0" max="1" step="0.1" value="0">
-                  </div>
+                </div>
             </div>
             <div id="btnRestablecerFiltros" class="btnRestablecerFiltros">
                 <input type="button" value='Restablecer Filtros'>
-            </div> 
-        </div>
+            </div>
+            </div>
         </section>
     </aside>
-          
+
 
     <!--    ###################################-->
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js" integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"
+        integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"
+        integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA=="
+        crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="./app.js"></script>
 </body>
+
 </html>
