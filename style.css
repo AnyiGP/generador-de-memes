@@ -446,7 +446,7 @@ button label {
 
 /*RESPONSIVE - BREACKPOINT 1*/
 
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 300px) and (max-width: 480px) {
   .contenedorBody {
     width: 100%;
   }
@@ -458,13 +458,19 @@ button label {
   .vistaMeme {
     width: 80vw;
     height: 80vw;
-    margin-top: 30%;
     /* position: absolute;
         left: 10vw;
         margin-top: 35vh; */
     display: block;
     justify-content: center;
     align-items: center;
+    margin-top: 70%;
+  }
+
+  .descargaMeme {
+    width: 70%;
+    margin: 14%;
+
   }
 
   .controlImagen,
