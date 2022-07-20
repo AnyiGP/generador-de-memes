@@ -31,8 +31,10 @@ btnCerrarImagen.addEventListener('click', (e) => {
 })
 
 //**************BOTON CLARO OSCURO***********/
+
+
 document.addEventListener('DOMContentLoaded', function() {
-  var elems = document.querySelector('select');
+  var elems = document.querySelectorAll('select');
   var instances = M.FormSelect.init(elems);
 })
 
@@ -200,46 +202,30 @@ const inputColorFondoImagen = document.getElementById('inputColorFondoImagen')
 inputColorFondoImagen.addEventListener('input', (e) => {
   img.style.backgroundColor = e.target.value
 })
+// para que me imprima el valor que elija el ususario en el lugar del span donde se ve el #de color
 
+// .innerText = evento.target.value.toUpperCase()
+
+// const actualizarColorTexto = () => {
+//   const color = $('text-color-input').value.toUpperCase()
+
+//   $('text-color').innerText = color
+//   $('top-text').style.color = color
+//   $('bottom-text').style.color = color
+// }
 
 //**********MEZCLADOR DE FONDO E IMAGEN **********// DEBE FUNCIONAR COMO LOS FILTROS DE MAS ARRIBA
 // // PRIMER INTENTO NF
-// const mezclador = document.getElementById('mezclador')
+const mezclador = document.getElementById('mezclador')
 
-// mezclador.addEventListener('select', (e) => {
-//   //cuando seleccione una opcion imprima la mezcla en la imagen
-//   img.style.backgroundBlendMode = e.target.value
-  
-//   //`nombreDelFiltro(${variable.value})`
-//   // `
-//   // normal(${value})
-//   // lighten(${})
-//   // `
-// })
+mezclador.addEventListener('change', (e) => {
+  img.style.backgroundBlendMode = e.target.value
+})
 
 //SEGUNDO INTENTO CON EJ DE MOZZILA
 document.getElementById('mezclador').onchange = function(e) {
   document.getElementById('img').style.backgroundBlendMode = document.getElementById('mezclador').selectedOptions[0].innerHTML
 }
-
-console.log(document.getElementById('img'));
-
-// mezclador.addEventListener('select', (e) => {
-//   //cuando seleccione una opcion imprima la mezcla en la imagen
-//   img.style.backgroundBlendMode = e.target.value
-  
-//   //`nombreDelFiltro(${variable.value})`
-//   // `
-//   // normal(${value})
-//   // lighten(${})
-//   // `
-// })
-
-// //**********ej mozzila
-// document.getElementById("select").onchange = function(event) {
-//   document.getElementById("div").style.backgroundBlendMode = document.getElementById("select").selectedOptions[0].innerHTML;
-// }
-// console.log(document.getElementById('div'));
 
 //***************COLOR FUENTE***************//
 const inputColorFuente = document.getElementById('inputColorFuente')
