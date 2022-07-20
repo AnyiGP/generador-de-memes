@@ -464,13 +464,17 @@ button label {
     display: block;
     justify-content: center;
     align-items: center;
-    margin-top: 70%;
+    margin-top: 50%;
   }
 
   .descargaMeme {
     width: 70%;
     margin: 14%;
 
+  }
+
+  #btnModoOscuro {
+    padding: 0;
   }
 
   .controlImagen,
