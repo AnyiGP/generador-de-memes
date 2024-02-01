@@ -57,7 +57,7 @@
 ### 👩‍💻 Paleta de colores
 ![image](./images/paleta%20de%20colores.png)
 
-Te dejo el link para que visites mi sitio [Proyecto Final Modulo 2](https://anyigp.github.io/GENERADOR-DE-MEMES/)
+Te dejo el link para que visites mi sitio [Proyecto Final Modulo 2](https://anyigp.github.io/generador-de-memes/)
 
 ![Divider gif](https://media1.giphy.com/media/xT0GqKaASLordVtYCk/giphy.gif)
 
